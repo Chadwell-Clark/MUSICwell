@@ -1,0 +1,49 @@
+.grid {
+    /* border: 1px solid black; */
+    margin: 10px
+}
+
+.container_main {
+    background: #f1f1f1;
+}
+.container_appViews {
+    width: 100%;
+    height: 100vh;
+}
+
+.container_appViews {
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    /* padding: 20% 10%; */
+    background: #f1f1f1;
+    width: 100%;
+    height: 100%vh;
+}
+.container_search {
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    /* padding: 20% 10%; */
+    background: #f1f1f1;
+    width: 100%;
+    height: 100%vh;
+}
+
+.container_yonderWells {
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    /* padding:  10%; */
+    background: #f1f1f1;
+    width: 100%;
+    height: 100%vh;
+}
+
+.container_footer {
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    
+    padding: 2rem;
+    width: 100%;
+    height: 100%vh;
+    background: #E1e6f4;
+}
+

@@ -1,0 +1,24 @@
+.nav {
+    /* display: flex;
+    justify-content: space-around; */
+    font-weight: 700;
+    font-size: 1.5rem;
+    position:sticky;
+    top: 0;
+    padding: 1rem;
+    background: #E1e6f4;
+}
+.nav_title {
+    font-size: 2.6rem;
+    font-weight:900;
+    
+}
+.nav_item {
+    /* border: 1px solid black; */
+
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
