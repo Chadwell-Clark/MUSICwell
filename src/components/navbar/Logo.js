@@ -7,7 +7,7 @@ import musicwell from "../../assets/musicwell.png";
 export const Logo =() => {
     return (
     <>
-    <img src={musicwell} alt="Logo"/>
+    <img className="logo" src={musicwell} alt="Logo"/>
     </>
 
     
