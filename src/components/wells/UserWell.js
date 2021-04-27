@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 
 import { currUser, getUserObj } from "../helpers/Helpers.js";
 import {
-  getUsersArtists,
-  getUserArtistById,
+  getUsersWells,
+  
+} from "../../modules/WellsManager.js";
+import {
+  getUserArtistById
 } from "../../modules/ArtistsManager.js";
 import { WellArtistCard } from "./WellArtistCard.js";
 
@@ -30,7 +33,7 @@ export const UserWell = () => {
   };
 
   const getArtists = () => {
-    return getUsersArtists(userId)
+    return getUsersWells(userId)
       .then((artistsFromAPI) => {
         console.log(artistsFromAPI);
         setArtists(artistsFromAPI);
@@ -52,9 +55,12 @@ export const UserWell = () => {
   useEffect(() => {
     getUser()
       .then(() => getArtists())
+      // .then(() => setIsLoading(false))
       
+  
+  return () => {
 
-    // .then(() => setIsLoading(false))
+  }
   }, []);
 
   return (
