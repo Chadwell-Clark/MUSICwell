@@ -34,7 +34,7 @@ export const Musicwell = () => (
                     center
                     middle
                     width={2}
-                    height={8}
+                    height={9}
                   >
                     <Search />
                   </Cell>
@@ -43,20 +43,21 @@ export const Musicwell = () => (
                     center
                     middle
                     width={2}
-                    height={10}
+                    height={11}
                   >
                     <YonderWells />
                   </Cell>
-                  <Cell
+                  {/* <Cell
                     className="container_footer"
                     center
                     middle
                     width={2}
                     height={2}
                   >
-                    <Footer />
-                  </Cell>
+                    <Footer /> */}
+                  {/* </Cell> */}
                 </Grid>
+                <Footer />
               </div>
             </>
           );

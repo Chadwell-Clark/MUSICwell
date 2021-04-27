@@ -1,7 +1,7 @@
 import {
   remoteURL,
   currUser,
-  getCurrUser,
+  
 } from "../components/helpers/Helpers.js";
 
 export const getUsersWells = (id) => {

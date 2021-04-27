@@ -1,0 +1,12 @@
+.artist_card {
+    margin: .5rem;
+    padding: .3rem;
+    border-radius: 10px;
+    background: #e1e6f4b8;
+    box-shadow: rgba(17, 17, 26, 0.15) 1px 1px 1px, rgba(17, 17, 26, 0.15) 1px 1px 8px;
+}
+
+.artist_card_img {
+    width: 200px;
+    height:auto;
+}

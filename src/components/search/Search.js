@@ -8,6 +8,11 @@ export const Search = () => {
     const[text, setText] = useState("");
     const[jazz, setJazz] = useState("");
 
+    const handleSearch = (e) => {
+        e.preventDefault();
+
+    }
+
     const handleClick = (e) => {
         e.preventDefault();
         getBinaryJazz()
@@ -16,20 +21,22 @@ export const Search = () => {
             return res
         })
     } 
-    
+
     return (
       <>
         <div className="">
           <div className="searchLabel">Search for Artists</div>
-          <input className="searchInput" value={text}></input>
+          <input className="searchInput" onChange={e => setText(e.target.value)} value={text}></input>
           <div>
-            <button className="searchBtn Btn">Search</button>
+            <button className="searchBtn Btn" onClick={handleSearch}>
+              Search
+            </button>
           </div>
           <div>
             <button className="searchBin Btn" onClick={handleClick}>
-              Binary
+              Story
             </button>
-            <div>{jazz}</div>
+            <div className="jazzStory">{jazz}</div>
           </div>
         </div>
       </>
