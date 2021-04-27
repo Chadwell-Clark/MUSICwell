@@ -6,7 +6,17 @@ import "./Search.css";
 
 export const Search = () => {
     const[text, setText] = useState("");
-    const binJazz = getBinaryJazz()
+    const[jazz, setJazz] = useState("");
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        getBinaryJazz()
+        .then((res) => {
+            setJazz(res)
+            return res
+        })
+    } 
+    
     return (
       <>
         <div className="">
@@ -16,8 +26,10 @@ export const Search = () => {
             <button className="searchBtn Btn">Search</button>
           </div>
           <div>
-            <button className="searchBin Btn">Binary</button>
-            {/* {binJazz} */}
+            <button className="searchBin Btn" onClick={handleClick}>
+              Binary
+            </button>
+            <div>{jazz}</div>
           </div>
         </div>
       </>
