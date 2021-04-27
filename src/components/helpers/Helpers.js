@@ -1,10 +1,12 @@
 
 export const remoteURL = "http://localhost:8088"
 
- export const currUser =  +sessionStorage.getItem("musicwell_userId")
+export const currUser = () =>  {
+    return +(sessionStorage.getItem("musicwell_userId"))
+}
 
 
-export const getCurrUser = (currUser) => {
-    return fetch (`${remoteURL}/users/${currUser}`)
-    .then(response => response.json);
+export const getUserObj = (id) => {
+    return fetch(`${remoteURL}/users/${id}`)
+    .then(response => response.json());
 }
