@@ -1,4 +1,4 @@
 import React from 'react'
 
 
-export const Artists
+// export const Artists

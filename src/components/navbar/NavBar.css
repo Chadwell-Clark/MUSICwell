@@ -1,6 +1,8 @@
 .nav {
     /* display: flex;
     justify-content: space-around; */
+    color:#3f3f3f;
+    font-family: 'Zen Dots', cursive;
     font-weight: 700;
     font-size: 1.5rem;
     position:sticky;
@@ -19,6 +21,6 @@
 }
 
 .logo {
-    width: 100%;
+    width: 80%;
     height: auto;
 }
