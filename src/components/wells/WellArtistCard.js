@@ -4,9 +4,13 @@ import "./WellArtistCard.css";
 
 
 
-export const WellArtistCard = ({artist}) => {
+export const WellArtistCard = ({artist, artistsList}) => {
     console.log("artist card", artist)
-
+    let commArt = []
+    if (artistsList.artistId !== "") {
+        commArt = artistsList.find(comm => {
+                    return artist.id === comm.artistId
+    })}
     return (
         <>
         <div className="artist_card">
@@ -15,6 +19,9 @@ export const WellArtistCard = ({artist}) => {
             <div>{artist?.name}</div>
             <div>{artist?.blurb}</div>
             <a href={artist?.infoURL}>More info about {artist.name}</a>
+            <div>
+                <div>{commArt.comment}</div>
+            </div>
             </div>
         </div>
         </>

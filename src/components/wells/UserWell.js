@@ -16,6 +16,7 @@ export const UserWell = () => {
   // const [isLoading, setIsLoading] = useState(true);
   const userId = currUser();
 
+  
   const fillWell = (usersArtists) => {
     // console.log("usersArtist", usersArtists);
     const newArr = usersArtists.filter((artist) => {
@@ -25,7 +26,6 @@ export const UserWell = () => {
     const urlArr = newArr.map((singleArtist) =>
       getUserArtistById(singleArtist.artistId)
     );
-
     Promise.all(urlArr).then((returned) => setWell(returned));
   };
 
@@ -56,18 +56,20 @@ export const UserWell = () => {
   }, [artistsList]);
 
   useEffect(() => {
-    getUser().then(() => getArtists());
+    getUser()
+    .then(() => getArtists());
     
     // .then(() => setIsLoading(false))
   }, []);
 
   return (
     <>
-      <div className="well_owner" >{`${user?.firstName.toUpperCase()}'s [well]`}</div>
+      <div className="well_owner">{`${user?.firstName.toUpperCase()}'s [well]`}</div>
       <div>
+        {console.log("comm", artistsList)}
         {console.log("well", well)}
         {well.map((artist) => (
-          <WellArtistCard artist={artist} key={artist.id} />
+          <WellArtistCard artist={artist} artistsList={artistsList} key={artist.id} />
         ))}
       </div>
     </>
