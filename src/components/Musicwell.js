@@ -15,7 +15,7 @@ export const Musicwell = () => (
     <Route
       render={() => {
         if (sessionStorage.getItem("musicwell_userId")) {
-            console.log(`user loggged in `)
+            // console.log(`user loggged in `)
           return (
             <>
               <div className="container_main">
