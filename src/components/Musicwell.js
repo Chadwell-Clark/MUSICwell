@@ -7,7 +7,7 @@ import { Register } from "./auth/Register.js";
 import  {NavBar }  from "./navbar/NavBar.js";
 import "./Musicwell.css"
 import { Search } from "./search/Search.js"
-import { YonderWells } from "./yonderWells/YonderWells.js";
+import { YonderWells } from "./yonderwells/YonderWells.js";
 import {Footer} from "./footer/Footer.js";
 
 export const Musicwell = () => (
@@ -67,7 +67,7 @@ export const Musicwell = () => (
       }}
     />
 
-    <Route path="/login">
+    <Route  exact path="/login">
       <Login />
     </Route>
     <Route path="/register">

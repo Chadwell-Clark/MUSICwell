@@ -10,7 +10,6 @@ export const Logo =() => {
     <img className="logo" src={musicWell4} alt="Logo"/>
     </>
 
-    
     )
 }
 

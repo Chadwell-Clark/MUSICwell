@@ -2,6 +2,7 @@ import React from "react";
 import "./NavBar.css";
 import { Grid, Cell } from "styled-css-grid";
 import { Logo } from "./Logo.js"
+import { Link } from "react-router-dom";
 
 
 
@@ -13,23 +14,32 @@ export const NavBar = () => {
             <Cell className="nav_item" middle center width={4}>
               <Logo />
             </Cell>
-            <Cell className="nav_item" middle center width={4}>
-              My [well]
+            <Cell middle center width={4}>
+              <Link className="nav_item" to="/">
+                
+                My [well]{" "}
+              </Link>
             </Cell>
-            <Cell className="nav_item" middle center width={4}>
-              Yonder [wells]
+            <Cell middle center width={4}>
+              <Link className="nav_item" to="/yonderwells">
+                {" "}
+                Yonder [well]s{" "}
+              </Link>
             </Cell>
             {/* <Cell className="nav_item" middle center width={2}>
               icon
             </Cell> */}
-            <Cell middle center className="nav_title" width={8}>
-              MUSIC[well]
+            <Cell middle center  width={8}>
+              <div className="nav_title">MUSIC[well]</div>
             </Cell>
             {/* <Cell className="nav_item" middle center width={2}>
               icon
             </Cell> */}
-            <Cell className="nav_item" middle center width={4}>
-              Logout
+            <Cell middle center width={4}>
+              <Link className="nav_item logout" to="/login">
+                {" "}
+                Logout
+              </Link>
             </Cell>
           </Grid>
         </nav>

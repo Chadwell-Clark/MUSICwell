@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { currUser, getUserObj } from "../helpers/Helpers.js";
 import { getUsersWells } from "../../modules/WellsManager.js";
-import { getUserArtistById } from "../../modules/ArtistsManager.js";
+import { getArtistById } from "../../modules/ArtistsManager.js";
 import { WellArtistCard } from "./WellArtistCard.js";
 import "./UserWell.css";
 
@@ -25,7 +25,7 @@ export const UserWell = ({id}) => {
         });
         // console.log("newArr", newArr);
         const urlArr = newArr.map((singleArtist) =>
-        getUserArtistById(singleArtist.artistId)
+        getArtistById(singleArtist.artistId)
         );
         Promise.all(urlArr).then((returned) => setWell(returned));
     };
