@@ -1,6 +1,7 @@
 import React from "react";
 import "./WellArtistCard.css";
 import { currUser, getUserObj } from "../helpers/Helpers.js";
+import {Link} from "react-router-dom";
 
 export const WellArtistCard = ({ artist, artistsList }) => {
     
@@ -18,7 +19,7 @@ export const WellArtistCard = ({ artist, artistsList }) => {
     btns = (
       <>
         {" "}
-        <button className="artist_detail">Details</button>
+        <Link to={`artistdetail/${artist.id}`}><button className="artist_detail" >Details</button></Link>
         <button className="artist_detail_edit">edit</button>{" "}
         <button className="artist_delete"> delete </button>{" "}
       </>
@@ -27,7 +28,9 @@ export const WellArtistCard = ({ artist, artistsList }) => {
       btns = (
         <>
           {" "}
-          <button className="artist_detail">Details</button>
+          <Link to={`artistdetail/${artist.id}`}>
+            <button className="artist_detail">Details</button>
+          </Link>
           <button className="artist_add">add</button>{" "}
         </>
       );
