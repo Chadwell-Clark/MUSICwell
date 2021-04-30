@@ -24,10 +24,10 @@ export const UserWell = ({id}) => {
             return artist.artistId !== "";
         });
         // console.log("newArr", newArr);
-        const urlArr = newArr.map((singleArtist) =>
-        getArtistById(singleArtist.artistId)
-        );
-        Promise.all(urlArr).then((returned) => setWell(returned));
+        Promise.all(newArr.map((singleArtist) =>
+          getArtistById(singleArtist.artistId)
+        ))
+        .then((returned) => setWell(returned));
     };
     
     const getArtists = () => {
