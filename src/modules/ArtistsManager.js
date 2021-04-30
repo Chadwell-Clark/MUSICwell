@@ -1,5 +1,10 @@
 import { remoteURL, currUser, getCurrUser} from "../components/helpers/Helpers.js";
 
+export const searchArtists =(text) => {
+  return fetch(`${remoteURL}/artists?q=${text}`)
+  .then((response) => response.json())
+}
+
 export const getAllArtists = () => {
   return fetch(`${remoteURL}/artists`)
   .then((response) => response.json()

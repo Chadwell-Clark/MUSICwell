@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Route, Redirect } from "react-router-dom";
 import { Grid,Cell } from "styled-css-grid"
 import { ApplicationViews } from "./ApplicationViews.js";
@@ -6,11 +6,14 @@ import { Login } from "./auth/Login.js";
 import { Register } from "./auth/Register.js";
 import  {NavBar }  from "./navbar/NavBar.js";
 import "./Musicwell.css"
-import { Search } from "./search/Search.js"
+import { SearchSide } from "./search/SearchSide.js"
 import { YonderWells } from "./yonderwells/YonderWells.js";
 import {Footer} from "./footer/Footer.js";
 
-export const Musicwell = () => (
+export const Musicwell = () => {
+  const [searchInputText, setSearchInputText] = useState()
+  
+  return (
   <>
     <Route
       render={() => {
@@ -27,7 +30,7 @@ export const Musicwell = () => (
                     width={4}
                     height={20}
                   >
-                    <ApplicationViews />
+                    <ApplicationViews searchInputText={searchInputText} />
                   </Cell>
                   <Cell
                     className="container_search"
@@ -36,7 +39,10 @@ export const Musicwell = () => (
                     width={2}
                     height={9}
                   >
-                    <Search />
+                    <SearchSide
+                      searchInputText={searchInputText}
+                      setSearchInputText={setSearchInputText}
+                    />
                   </Cell>
                   <Cell
                     className="container_yonderWells"
@@ -75,3 +81,4 @@ export const Musicwell = () => (
     </Route>
   </>
 );
+    }
