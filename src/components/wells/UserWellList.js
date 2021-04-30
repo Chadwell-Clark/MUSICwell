@@ -4,12 +4,12 @@ import { currUser, getUserObj } from "../helpers/Helpers.js";
 import { getUsersWells } from "../../modules/WellsManager.js";
 import { getArtistById } from "../../modules/ArtistsManager.js";
 import { WellArtistCard } from "./WellArtistCard.js";
-import "./UserWell.css";
+import "./UserWellList.css";
 
 
 //   ***   Get list of artist based on whether the current user ha them in their well
 
-export const UserWell = ({id}) => {
+export const UserWellList = ({id}) => {
 //   const [userId, setUserId] = useState();
   const [user, setUser] = useState();
   const [artistsList, setArtistsList] = useState([]);

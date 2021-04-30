@@ -64,7 +64,7 @@ export const SearchSide = ({searchInputText, setSearchInputText}) => {
 
     return (
       <>
-        <div className="">
+        <div className="search-side">
           <div className="searchLabel">Search for Artists</div>
           <input
             className="searchInput"
