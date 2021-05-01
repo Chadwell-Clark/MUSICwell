@@ -7,7 +7,7 @@ import { Register } from "./auth/Register.js";
 import  {NavBar }  from "./navbar/NavBar.js";
 import "./Musicwell.css"
 import { SearchSide } from "./search/SearchSide.js"
-import { YonderWells } from "./yonderwells/YonderWells.js";
+import { YonderWellsSide } from "./yonderwells/YonderWellsSide.js";
 import {Footer} from "./footer/Footer.js";
 
 export const Musicwell = () => {
@@ -51,7 +51,7 @@ export const Musicwell = () => {
                     width={2}
                     height={11}
                   >
-                    <YonderWells />
+                    <YonderWellsSide />
                   </Cell>
                   {/* <Cell
                     className="container_footer"

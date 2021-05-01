@@ -9,3 +9,7 @@
     box-shadow: rgba(17, 17, 26, 0.15) 1px 1px 1px, rgba(17, 17, 26, 0.15) 1px 1px 8px;
 
 }
+
+.appview-overflow {
+    overflow: auto;
+}

@@ -20,6 +20,10 @@ export const SearchSide = ({searchInputText, setSearchInputText}) => {
 
     const handleSearch = (e) => {
         // e.preventDefault();
+        window.speechSynthesis.speak(
+          new SpeechSynthesisUtterance("Hello World")
+        );
+
         setSearchInputText(text);
         history.push("/search"); 
     }
