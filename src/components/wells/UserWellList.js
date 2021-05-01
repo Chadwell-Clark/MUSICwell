@@ -75,7 +75,8 @@ export const UserWellList = ({id}) => {
   }, []);
 
   return (
-    <><div >
+    <>
+    <div className="appview-overflow">
       <div className="well_owner">{`${user?.firstName?.toUpperCase()}'s [well]`}</div>
       <div>
         {console.log("comm", artistsList)}

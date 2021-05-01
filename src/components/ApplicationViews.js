@@ -2,7 +2,8 @@ import React from 'react';
 import { Route } from "react-router-dom";
 import { UserWellList } from "./wells/UserWellList.js"
 import { ArtistDetail } from "./wells/ArtistDetail.js"
-import { YonderWells } from "./yonderwells/YonderWells.js"
+import { YonderWellList } from "./yonderwells/YonderWellList.js"
+import { YonderWell } from "./yonderwells/YonderWell.js"
 import { SearchList } from "./search/SearchList.js"
 
 
@@ -19,8 +20,11 @@ export const ApplicationViews = ({searchInputText}) => {
                 <Route path="/artistdetail/:artistId(\d+)">
                     <ArtistDetail />
                 </Route>
-                <Route path="/yonderwells">
-                    <YonderWells />
+                <Route path="/yonderwell/:id(\d+)">
+                    <YonderWell />
+                </Route>
+                <Route path="/yonderwelllist">
+                    <YonderWellList />
                 </Route>
                 <Route path="/search">
                     <SearchList searchInputText={searchInputText}/>
