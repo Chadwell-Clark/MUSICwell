@@ -18,7 +18,7 @@ export const ArtistDetail = () => {
        })
     }, [artistId])
 
-    
+    window.scroll(0,0)
 
     return (
       <>
