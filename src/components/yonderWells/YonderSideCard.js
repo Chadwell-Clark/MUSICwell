@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Yonder.css";
 import { Link } from "react-router-dom";
 export const YonderSideCard = ({user}) => {
 
@@ -6,7 +7,7 @@ export const YonderSideCard = ({user}) => {
       <div>
           
           <Link to={`/yonderwell/${user.id}`}>
-        <div>{user?.firstName.toUpperCase()}'s [well]</div>
+        <div className="yonder-link">{user?.firstName.toUpperCase()}'s [well]</div>
         
         </Link>
       </div>

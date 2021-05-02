@@ -4,6 +4,7 @@ import { getAllWells} from "../../modules/WellsManager.js";
 import { getAllUsers} from "../../modules/UsersManager.js";
 import { Link } from "react-router-dom";
 import { YonderSideCard } from "./YonderSideCard.js";
+import "./Yonder.css";
 
 
 export const YonderWellsSide = () => {
