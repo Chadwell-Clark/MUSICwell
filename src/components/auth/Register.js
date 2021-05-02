@@ -56,32 +56,82 @@ export const Register = () => {
     }
 
     return (
-        <main style={{ textAlign: "center" }}>
-
-            <dialog className="dialog dialog--password" open={conflictDialog}>
-                <div>Account with that email address already exists</div>
-                <button className="button--close" onClick={e => setConflictDialog(false)}>Close</button>
-            </dialog>
-
-            <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for Application Name</h1>
-                <fieldset>
-                    <label htmlFor="firstName"> First Name </label>
-                    <input type="text" name="firstName" id="firstName" className="form-control" placeholder="First name" required autoFocus value={registerUser.firstName} onChange={handleInputChange} />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="lastName"> Last Name </label>
-                    <input type="text" name="lastName" id="lastName" className="form-control" placeholder="Last name" required value={registerUser.lastName} onChange={handleInputChange} />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="inputEmail"> Email address </label>
-                    <input type="email" name="email" id="email" className="form-control" placeholder="Email address" required value={registerUser.email} onChange={handleInputChange} />
-                </fieldset>
-                <fieldset>
-                    <button type="submit"> Sign in </button>
-                </fieldset>
-            </form>
-        </main>
-    )
+      <main className="container--login" style={{ textAlign: "center" }}>
+        <dialog className="dialog dialog--password" open={conflictDialog}>
+          <div>Account with that email address already exists</div>
+          <button
+            className="button--close"
+            onClick={(e) => setConflictDialog(false)}
+          >
+            Close
+          </button>
+        </dialog>
+        <form className="form--login" onSubmit={handleRegister}>
+          <h1 className="login-title">Register your [well]</h1>
+          <div className="login-card">
+            {/* <fieldset> */}
+            <div className="login-font-weight">
+              <label htmlFor="firstName"> First Name </label>
+            </div>
+            <div className="login-div">
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                className="form-control"
+                placeholder="First name"
+                required
+                autoFocus
+                value={registerUser.firstName}
+                onChange={handleInputChange}
+              />
+            </div>
+            {/* </fieldset> */}
+            {/* <fieldset> */}
+            <div className="login-font-weight">
+              <label htmlFor="lastName"> Last Name </label>
+            </div>
+            <div className="login-div">
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                className="form-control"
+                placeholder="Last name"
+                required
+                value={registerUser.lastName}
+                onChange={handleInputChange}
+              />
+            </div>
+            {/* </fieldset> */}
+            {/* <fieldset> */}
+            <div className="login-font-weight">
+              <label htmlFor="inputEmail"> Email address </label>
+            </div>
+            <div className="login-div">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                className="form-control"
+                placeholder="Email address"
+                required
+                value={registerUser.email}
+                onChange={handleInputChange}
+              />
+            </div>
+            {/* </fieldset> */}
+            {/* <fieldset> */}
+            <div className="login-div">
+              <button className="login-btn" type="submit">
+                {" "}
+                Sign in{" "}
+              </button>
+            </div>
+            {/* </fieldset> */}
+          </div>
+        </form>
+      </main>
+    );
 }
 
