@@ -82,7 +82,11 @@ export const UserWellList = ({id}) => {
         {console.log("comm", artistsList)}
         {console.log("well", well)}
         {well.map((artist) => (
-          <WellArtistCard artist={artist} artistsList={artistsList} key={artist.id} />
+          <WellArtistCard 
+          artist={artist} 
+          artistsList={artistsList} 
+          key={artist.id}
+          userId={userId} />
         ))}
       </div>
       </div>
