@@ -21,7 +21,7 @@ export const NavBar = () => {
               </Link>
             </Cell>
             <Cell middle center width={4}>
-              <Link className="nav_item" to="/yonderwells">
+              <Link className="nav_item" to="/yonderwellslist">
                 {" "}
                 Yonder [well]s{" "}
               </Link>
