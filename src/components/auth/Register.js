@@ -67,8 +67,11 @@ export const Register = () => {
           </button>
         </dialog>
         <form className="form--login" onSubmit={handleRegister}>
-          <h1 className="login-title">Register your [well]</h1>
+          <h1 className="login-title">&nbsp;&nbsp;Music[well]&nbsp;&nbsp;</h1>
           <div className="login-card">
+            <div className="login-div">
+              <h2>Register your [well]</h2>
+            </div>
             {/* <fieldset> */}
             <div className="login-font-weight">
               <label htmlFor="firstName"> First Name </label>
@@ -125,7 +128,7 @@ export const Register = () => {
             <div className="login-div">
               <button className="login-btn" type="submit">
                 {" "}
-                Sign in{" "}
+                Login{" "}
               </button>
             </div>
             {/* </fieldset> */}

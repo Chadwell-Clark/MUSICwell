@@ -35,7 +35,9 @@
     background: #e1e6f4b8;
     box-shadow: rgba(17, 17, 26, 0.15) 1px 1px 1px, rgba(17, 17, 26, 0.15) 1px 1px 8px;
 }
-
+.form-control {
+    border-radius: 6px;
+}
 .login-div {
     align-items: center;
     margin: .4rem;
@@ -54,5 +56,8 @@
     font-size: 1.1rem;
     padding: .3rem .4rem;
     font-weight: 600;
+    background: #729b79bd;
+    border-radius: 6px;
+    
 }
 
