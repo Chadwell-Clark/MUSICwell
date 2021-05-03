@@ -34,6 +34,7 @@ export const getGroupRelatedArtists = (group_id) => {
     `${remoteURL}/artists_groups/?groupId=${group_id}/&_embed=artists`
   ).then((response) => response.json());
 };
+
 export const getAlbumRelatedArtists = (album_id) => {
   return fetch(
     `${remoteURL}/artists_albums/?albumId=${album_id}/&_embed=artists`
