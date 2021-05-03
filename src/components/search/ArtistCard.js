@@ -1,25 +1,21 @@
-import React, {useState, useEffect} from "react";
+//     *****     Chad[well] Clark 2021     *****     //
+
+import React, { useState, useEffect } from "react";
 // import "./WellArtistCard.css";
 import { currUser, getUserObj } from "../helpers/Helpers.js";
 import { Link } from "react-router-dom";
 
-export const ArtistCard = ({ artist, userWells}) => {
-    
-    
-    const user = currUser();
+export const ArtistCard = ({ artist, userWells }) => {
+  const user = currUser();
 
-   
-    
-//   let commArt = [];
-//   if (userWell.artistId !== "") {
-//     commArt = userWell.find((comm) => {
-//       return artist.id === comm.artistId;
-//     });
-//   }
+  //   let commArt = [];
+  //   if (userWell.artistId !== "") {
+  //     commArt = userWell.find((comm) => {
+  //       return artist.id === comm.artistId;
+  //     });
+  //   }
 
-
-
-//   console.log("artistlist", userWell);
+  //   console.log("artistlist", userWell);
   let btns = "";
   if (userWells[0]?.userId === user) {
     btns = (

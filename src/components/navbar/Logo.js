@@ -1,18 +1,12 @@
+//     *****     Chad[well] Clark 2021     *****     //
 
-
-import React from 'react'
+import React from "react";
 import musicWell4 from "../../assets/musicWell4.png";
 
-
-export const Logo =() => {
-    return (
+export const Logo = () => {
+  return (
     <>
-    <img className="logo" src={musicWell4} alt="Logo"/>
+      <img className="logo" src={musicWell4} alt="Logo" />
     </>
-
-    )
-}
-
-
-
-
+  );
+};
