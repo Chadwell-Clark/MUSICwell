@@ -38,36 +38,66 @@ export const Login = () => {
     }
 
     return (
-        <main className="container--login">
-            <dialog className="dialog dialog--auth" open={existDialog}>
-                <div>User does not exist</div>
-                <button className="button--close" onClick={e => setExistDialog(false)}>Close</button>
-            </dialog>
-            <section>
+      <main className="container--login" style={{ textAlign: "center" }}>
+        <div className="">
+          <dialog className="dialog dialog--auth" open={existDialog}>
+            <div>User does not exist</div>
+            <button
+              className="button--close"
+              onClick={(e) => setExistDialog(false)}
+            >
+              Close
+            </button>
+          </dialog>
+          <div className="login-centered">
+            <h1 className="login-title">
+              &nbsp;&nbsp;Music[well]&nbsp;&nbsp;
+            </h1>
+            
+            <div className="login-card">
+              <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Musicwell</h1>
-                    <h2>Please sign in</h2>
-                    <fieldset>
-                        <label htmlFor="inputEmail"> Email address </label>
-                        <input type="email"
-                            id="email"
-                            className="form-control"
-                            placeholder="Email address"
-                            required autoFocus
-                            value={loginUser.email}
-                            onChange={handleInputChange} />
-                    </fieldset>
-                    <fieldset>
-                        <button type="submit">
-                            Sign in
-                        </button>
-                    </fieldset>
+                  <div className="login-div">
+                    <h2>Login with email</h2>
+                  </div>
+                  {/* <fieldset> */}
+                  {/* <div className="login-div"> */}
+                  {/* </div> */}
+                  <div className="login-div">
+                    <label htmlFor="inputEmail"></label>
+                    <input
+                      type="email"
+                      id="email"
+                      className="form-control"
+                      placeholder="Email address"
+                      required
+                      autoFocus
+                      value={loginUser.email}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  {/* </fieldset> */}
+                  {/* <fieldset> */}
+                  <div className="login-div">
+                    <button className="login-btn" type="submit">
+                      Login
+                    </button>
+                  </div>
+                  {/* </fieldset> */}
                 </form>
-            </section>
-            <section className="link--register">
-                <Link to="/register">Register for an account</Link>
-            </section>
-        </main>
-    )
+              </section>
+              <section className="link--register">
+                <div className="login-div login-font-weight">Get your own [well]</div>
+                <Link to="/register">
+                  <div className="login-div">
+                    <button className="login-btn">Register</button>
+                  </div>
+                </Link>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+    );
 }
 
