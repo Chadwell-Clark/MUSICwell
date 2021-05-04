@@ -36,9 +36,9 @@ export const WellArtistCard = ({ artist, artistsList, userId }) => {
       <>
         {" "}
         <Link to={`/artistdetail/${artist.id}`}>
-          <button className="artist_detail">Details</button>
+          <button className="artist_detail"> Artist Details</button>
         </Link>
-        <button className="artist_add">add</button>{" "}
+        {/* <button className="artist_add">add</button>{" "} */}
       </>
     );
   }

@@ -101,7 +101,7 @@ export const ArtistDetailEdit = () => {
   //   ***        if not then present an add artist button
 
   let btns = "";
-  if (artistId in wellArr) {
+  if (wellArr.includes(artistId)) {
     btns = (
       <>
         <div>

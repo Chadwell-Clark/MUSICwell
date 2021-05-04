@@ -3,7 +3,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 
-import { getUsersWells, addArtistToWell } from "../../modules/WellsManager.js";
+import {
+  getUsersWells,
+  addArtistToWell,
+  deleteArtistFromWell,
+} from "../../modules/WellsManager.js";
 import { getArtistById } from "../../modules/ArtistsManager.js";
 import { getGroupsByArtistId } from "../../modules/GroupManager.js";
 import { currUser, getUserObj } from "../helpers/Helpers.js";
@@ -14,7 +18,7 @@ export const ArtistDetail = () => {
   const[currWell, setCurrWell] = useState([])
   const[wellArr, setWellArr]=useState([])
   const[relatedGroups, setRelatedGroups] = useState([])
-  const[relatedArtists,setRelatedArtists] = useState([])
+  const[relatedArtists,setRelatedArtists] = useState()
   const [isLoading, setIsLoading] = useState(true);
 
   //   ***  Set artistId to one passed in params
@@ -66,14 +70,19 @@ export const ArtistDetail = () => {
     // let artistArr = []
     Promise.all(relatedGroups.map((group) => {
       console.log("groupId",group.groupId)
-        return getGroupRelatedArtists(group.groupId)
+        return getGroupRelatedArtists(group.groupId)}))
       .then((parsed) => {
-        console.log("parsed",parsed)
-        setRelatedArtists([ ...parsed])
-        return parsed
+        // console.log("parsed",parsed)
+        // let compArr = []
+        // parsed.forEach(arr => compArr.concat(arr))
+        // setRelatedArtists(...parsed)
+        parsed = parsed.reduce((a, b) => a.concat(b), []);
+        console.log("compArr",parsed)
+        setRelatedArtists(parsed)
       })
-    }))
+    
   }
+
   //   ***  Add artist to logged in users well
   //   ***   then push to artist detail edit page
   const handleAdd = (e) => {
@@ -84,18 +93,29 @@ export const ArtistDetail = () => {
       albumId: "",
       comment: ""
     }
+
     console.log("addObj",artistAddObj)
     addArtistToWell(artistAddObj)
     .then(() => history.push(`/artistdetailedit/${+artistId}`))
-
   }
+
+  const handleEdit = (e) => {
+    e.preventDefault();
+    console.log("edit");
+  };
+
+  const handleDelete = (e) => {
+    e.preventDefault();
+    console.log("delete");
+    deleteArtistFromWell(+artistId)
+    .then(() => history.push("/"))
+  };
 
   useEffect(() => {
     getArtistById(artistId).then((a) => {
       setArtist(a);
       usersWells();
       getRelated()
-      
       setIsLoading(false);
     });
   }, []);
@@ -114,17 +134,23 @@ export const ArtistDetail = () => {
   //   ***        if not then present an add artist button
 
   let btns = "";
-  if (artistId in wellArr  ) {
+  
+  if (wellArr.includes(+artistId) ) {
     btns = (
       <>
         <div>
-          <button 
-          type="button"
+          <button type="button" 
           className="artist_detail_edit"
-          >edit</button>
+          onClick={handleEdit}>
+            Edit Comments
+          </button>
           <button 
+          type="button" 
           className="artist_delete"
-          > remove </button>
+          onClick={handleDelete}>
+            
+            Remove Artist
+          </button>
           <div className="artist_card_comment">{commArt?.comment}</div>
         </div>
       </>
@@ -137,14 +163,14 @@ export const ArtistDetail = () => {
         type="button" 
         className="artist_add"
         onClick={handleAdd}
-        >add</button>
+        >Add Artist</button>
         </div>
       </>
     );
   }
 
   //        Functionality:
-  //               Add artist to well
+  
   //               remove artist from well(passed from parent?)
   //                edit artist comments
   //
@@ -152,8 +178,8 @@ export const ArtistDetail = () => {
   return (
     <>
       <section>
-        {console.log("wellArr", wellArr)}
-        {console.log("userWell", currWell)}
+        {/* {console.log("wellArr", wellArr)} */}
+        {/* {console.log("userWell", currWell)} */}
         {/* {console.log("artistId", artistId)} */}
         {console.log("related-groups", relatedGroups)}
         {console.log("related-artists", relatedArtists)}
@@ -163,11 +189,11 @@ export const ArtistDetail = () => {
         <div>{artist?.roles}</div>
         <a href={artist?.infoURL}>{artist?.infoURL}</a>
         
-
         <div>{btns}</div>
       </section>
       <section>
         <div>Related Artists</div>
+        {relatedArtists[0].artist.name}
         <div>{relatedGroups[0]?.groupId}</div>
       </section>
     </>
