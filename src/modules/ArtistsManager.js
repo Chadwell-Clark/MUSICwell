@@ -31,7 +31,7 @@ export const getUsersArtists = (user_id) => {
 
 export const getGroupRelatedArtists = (group_id) => {
   return fetch(
-    `${remoteURL}/artists_groups/?groupId=${group_id}/&_embed=artists`
+    `${remoteURL}/artists_groups/?groupId=${group_id}/&_expand=artists`
   ).then((response) => response.json());
 };
 

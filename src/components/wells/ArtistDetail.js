@@ -1,16 +1,20 @@
 //     *****     Chad[well] Clark 2021     *****     //
 
 import React, { useState, useEffect } from "react";
-import { getArtistById } from "../../modules/ArtistsManager.js";
 import { useParams, useHistory } from "react-router-dom";
-import { currUser, getUserObj } from "../helpers/Helpers.js";
+
 import { getUsersWells } from "../../modules/WellsManager.js";
+import { getArtistById } from "../../modules/ArtistsManager.js";
+import { getGroupsByArtistId } from "../../modules/GroupManager.js";
+import { currUser, getUserObj } from "../helpers/Helpers.js";
+import { getGroupRelatedArtists } from "../../modules/ArtistsManager.js";
 
 export const ArtistDetail = () => {
   const [artist, setArtist] = useState({});
   const[currWell, setCurrWell] = useState([])
   const[wellArr, setWellArr]=useState([])
-  const[related, setRelated]= useState([])
+  const[relatedGroups, setRelatedGroups] = useState([])
+  const[relatedArtists,setRelatedArtists] = useState([])
   const [isLoading, setIsLoading] = useState(true);
   // console.log("Artist detail is loaded");
   const { artistId } = useParams();
@@ -28,17 +32,44 @@ export const ArtistDetail = () => {
     currWell.map(item => {
       if (item.artistId !== "")
         {arr.push(item?.artistId)}
-        console.log("ArtistId", item?.artistId)
+        // console.log("ArtistId", item?.artistId)
         return item
       })
-    console.log("arr",arr)
+    // console.log("arr",arr)
     setWellArr(arr)
   }
-  
+
+  let commArt = [];
+  if (currWell.artistId !== "") {
+    commArt = currWell.find((comm) => {
+      return artist.id === comm.artistId;
+    });
+  }
+
+  const getRelated = () => {
+    getGroupsByArtistId(artistId)
+    .then((groups) => setRelatedGroups(groups))
+  }
+
+  const getArtists =() => {
+    // let artistArr = []
+    Promise.all(relatedGroups.map((group) => {
+      console.log("groupId",group.groupId)
+       return getGroupRelatedArtists(group.groupId)
+      .then((parsed) => {
+        console.log("parsed",parsed)
+        setRelatedArtists([ ...parsed])
+        return parsed
+      })
+    }))
+  }
+
   useEffect(() => {
     getArtistById(artistId).then((a) => {
       setArtist(a);
       usersWells();
+      getRelated()
+      
       setIsLoading(false);
     });
   }, []);
@@ -50,9 +81,15 @@ export const ArtistDetail = () => {
     
     useEffect(() => {
     //  if (currWell > 0) {
-      getWellArr()
+      getWellArr();
+      // getArtists();
+      
     //  }
     }, [currWell])
+
+    useEffect(() => {
+      getArtists();
+    }, [relatedGroups])
 
   window.scroll(0, 0);
 
@@ -71,13 +108,10 @@ export const ArtistDetail = () => {
   if (artistId in wellArr  ) {
     btns = (
       <>
-      <div>
-        {" "}
-        {/* <Link to={`/artistdetail/${artist.id}`}>
-          <button className="artist_detail">Details</button>
-        </Link> */}
-        <button className="artist_detail_edit">edit</button>{" "}
-        <button className="artist_delete"> remove </button>{" "}
+        <div>
+          <div className="artist_card_comment">{commArt?.comment}</div>
+          <button className="artist_detail_edit">edit</button>{" "}
+          <button className="artist_delete"> remove </button>{" "}
         </div>
       </>
     );
@@ -85,10 +119,6 @@ export const ArtistDetail = () => {
     btns = (
       <>
       <div>
-        {/* {" "}
-        <Link to={`/artistdetail/${artist.id}`}>
-          <button className="artist_detail">Details</button>
-        </Link> */}
         <button className="artist_add">add</button>{" "}
         </div>
       </>
@@ -104,23 +134,22 @@ export const ArtistDetail = () => {
   return (
     <>
       <section>
-        {console.log("wellArr", wellArr)}
+        {/* {console.log("wellArr", wellArr)} */}
         {console.log("userWell", currWell)}
-        {console.log("artistId", artistId)}
+        {/* {console.log("artistId", artistId)} */}
+        {console.log("related-groups", relatedGroups)}
+        {console.log("related-artists", relatedArtists)}
         <img src={artist?.imageURL} alt={artist?.name} />
         <div>{artist?.name}</div>
         <div>{artist?.blurb}</div>
         <div>{artist?.roles}</div>
         <a href={artist?.infoURL}>{artist?.infoURL}</a>
-        <div>
-       {btns}
-       </div>
+        
+
+        <div>{btns}</div>
       </section>
       <section>
-        <div>
-          Related Artists
-
-        </div>
+        <div>{relatedGroups[0]?.groupId}</div>
       </section>
     </>
   );

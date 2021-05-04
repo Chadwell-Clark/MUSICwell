@@ -1,9 +1,10 @@
 //     *****     Chad[well] Clark 2021     *****     //
 
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./WellArtistCard.css";
 import { currUser, getUserObj } from "../helpers/Helpers.js";
-import { Link } from "react-router-dom";
 
 export const WellArtistCard = ({ artist, artistsList, userId }) => {
   const user = userId;
