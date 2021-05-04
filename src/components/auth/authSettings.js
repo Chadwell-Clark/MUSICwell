@@ -1,9 +1,10 @@
+//     *****     Chad[well] Clark 2021     *****     //
+
 // If your json-server API URL or endpoint is different, please change it below!
 export const authApi = {
   localApiBaseUrl: "http://localhost:8088",
-  endpoint: "users"
-}
+  endpoint: "users",
+};
 
 // The user id is saved under the key app_user_id in session Storage. Change below if needed!
-export const userStorageKey = "musicwell_userId"
-
+export const userStorageKey = "musicwell_userId";

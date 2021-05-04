@@ -1,3 +1,5 @@
+//     *****     Chad[well] Clark 2021     *****     //
+
 import React, { useState, useEffect } from "react";
 import { currUser, getUserObj } from "../helpers/Helpers.js";
 import { getUsersWells } from "../../modules/WellsManager.js";
@@ -6,15 +8,14 @@ import { WellArtistCard } from "../wells/WellArtistCard.js";
 import "../wells/UserWellList.css";
 import { useParams } from "react-router-dom";
 
-
 //   ***   Get list of artist based on whether the user ha them in their well
 export const YonderWell = () => {
-    const [user, setUser] = useState();
-    const [artistsList, setArtistsList] = useState([]);
-    const [well, setWell] = useState([]);
+  const [user, setUser] = useState();
+  const [artistsList, setArtistsList] = useState([]);
+  const [well, setWell] = useState([]);
 
-    const {userId} = useParams();
-    console.log("userId",userId)
+  const { userId } = useParams();
+  console.log("userId", userId);
 
   const fillWell = (usersArtists) => {
     console.log("usersArtist", usersArtists);
@@ -31,7 +32,7 @@ export const YonderWell = () => {
     return getUsersWells(userId).then((artistsFromAPI) => {
       console.log(artistsFromAPI);
       setArtistsList(artistsFromAPI);
-      console.log("AL!",artistsList);
+      console.log("AL!", artistsList);
       // fillWell(artistsList);
       return artistsFromAPI;
     });
@@ -43,7 +44,6 @@ export const YonderWell = () => {
       setUser(userFromAPI);
     });
   };
-
 
   useEffect(() => {
     if (artistsList.length > 0) {
@@ -59,11 +59,6 @@ export const YonderWell = () => {
   }, []);
 
   window.scroll(0, 0);
-
-
-
-
-
 
   return (
     <>
@@ -85,11 +80,3 @@ export const YonderWell = () => {
     </>
   );
 };
-
-
-
-
-
-
-
-
