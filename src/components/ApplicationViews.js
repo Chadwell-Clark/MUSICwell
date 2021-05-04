@@ -4,6 +4,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { UserWellList } from "./wells/UserWellList.js";
 import { ArtistDetail } from "./wells/ArtistDetail.js";
+import { ArtistDetailEdit } from "./wells/ArtistDetailEdit.js";
 import { YonderWellsList } from "./yonderwells/YonderWellsList.js";
 import { YonderWell } from "./yonderwells/YonderWell.js";
 import { SearchList } from "./search/SearchList.js";
@@ -18,6 +19,9 @@ export const ApplicationViews = ({ searchInputText }) => {
         </Route>
         <Route path="/artistdetail/:artistId(\d+)">
           <ArtistDetail />
+        </Route>
+        <Route path="/artistdetailedit/:artistId(\d+)">
+          <ArtistDetailEdit />
         </Route>
         <Route exact path="/yonderwell/:userId(\d+)">
           <YonderWell />

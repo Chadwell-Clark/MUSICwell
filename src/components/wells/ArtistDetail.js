@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 
-import { getUsersWells } from "../../modules/WellsManager.js";
+import { getUsersWells, addArtistToWell } from "../../modules/WellsManager.js";
 import { getArtistById } from "../../modules/ArtistsManager.js";
 import { getGroupsByArtistId } from "../../modules/GroupManager.js";
 import { currUser, getUserObj } from "../helpers/Helpers.js";
@@ -16,17 +16,22 @@ export const ArtistDetail = () => {
   const[relatedGroups, setRelatedGroups] = useState([])
   const[relatedArtists,setRelatedArtists] = useState([])
   const [isLoading, setIsLoading] = useState(true);
-  // console.log("Artist detail is loaded");
-  const { artistId } = useParams();
-  // const history = useHistory();
-  // console.log(artistId);
-  const loggedInUser = currUser();
 
+  //   ***  Set artistId to one passed in params
+  const { artistId } = useParams();
+  const history = useHistory();
+  // console.log(artistId);
+  //   ***  Set loggedInUser to the currently logged in user
+  const loggedInUser = currUser();
+  //   ***  Get the userWells for the current logged in user
+  //   ***   Set currWell to logged in users well
   const usersWells = () => {
     getUsersWells(loggedInUser)
     .then((res) => setCurrWell(res))
   }
 
+  //   ***  Get an array of artistIds from logged in users well
+  //   ***  Set as wellArr
   const getWellArr = () => {
     let arr = [];
     currWell.map(item => {
@@ -38,30 +43,51 @@ export const ArtistDetail = () => {
     // console.log("arr",arr)
     setWellArr(arr)
   }
-
+  //   ***  Get comment for current artist from
+  //   ***    logged in users well store as commArt
   let commArt = [];
   if (currWell.artistId !== "") {
     commArt = currWell.find((comm) => {
       return artist.id === comm.artistId;
     });
   }
-
+  //   ***  Get groups related to artist based off artistId
+  //   ***    set relatedGroups to this array of objects
   const getRelated = () => {
     getGroupsByArtistId(artistId)
     .then((groups) => setRelatedGroups(groups))
   }
+  //   ***  Get artists that are related to groups 
+  //   ***   map through each group and use groupId to 
+  //   ***   call database to get related artist to those groups
+  //   ***   Add those artists to relatedartist array as objects
 
   const getArtists =() => {
     // let artistArr = []
     Promise.all(relatedGroups.map((group) => {
       console.log("groupId",group.groupId)
-       return getGroupRelatedArtists(group.groupId)
+        return getGroupRelatedArtists(group.groupId)
       .then((parsed) => {
         console.log("parsed",parsed)
         setRelatedArtists([ ...parsed])
         return parsed
       })
     }))
+  }
+  //   ***  Add artist to logged in users well
+  //   ***   then push to artist detail edit page
+  const handleAdd = (e) => {
+    e.preventDefault()
+    const artistAddObj = {
+      userId: loggedInUser,
+      artistId: +artistId,
+      albumId: "",
+      comment: ""
+    }
+    console.log("addObj",artistAddObj)
+    addArtistToWell(artistAddObj)
+    .then(() => history.push(`/artistdetailedit/${+artistId}`))
+
   }
 
   useEffect(() => {
@@ -74,17 +100,8 @@ export const ArtistDetail = () => {
     });
   }, []);
   
-  // useEffect(() => {
-    //   usersWells()
-    //   // .then(()=> getWellArr())
-    // }, [])
-    
     useEffect(() => {
-    //  if (currWell > 0) {
       getWellArr();
-      // getArtists();
-      
-    //  }
     }, [currWell])
 
     useEffect(() => {
@@ -93,25 +110,22 @@ export const ArtistDetail = () => {
 
   window.scroll(0, 0);
 
-  //add buttons based on:
-  //        1.who the current user is  (current user)
-  //            and
-  //        2.whether the artist exist in their well
-  //    Create array from usersWells that is filled with artist ids from well
-  //        if currUser === logged in user && artistId is in logged in user's well
-  //                   show comments and edit and remove buttons
-  //                    then show related artist links
-  //         if currUser !== logged in user || artist is not in user's well
-  //                     show comments and add artist button
-  //                     then show related artist links
+  //   ***   If artist is in logged in user's well add edit and delete buttons and comment
+  //   ***        if not then present an add artist button
+
   let btns = "";
   if (artistId in wellArr  ) {
     btns = (
       <>
         <div>
+          <button 
+          type="button"
+          className="artist_detail_edit"
+          >edit</button>
+          <button 
+          className="artist_delete"
+          > remove </button>
           <div className="artist_card_comment">{commArt?.comment}</div>
-          <button className="artist_detail_edit">edit</button>{" "}
-          <button className="artist_delete"> remove </button>{" "}
         </div>
       </>
     );
@@ -119,7 +133,11 @@ export const ArtistDetail = () => {
     btns = (
       <>
       <div>
-        <button className="artist_add">add</button>{" "}
+        <button 
+        type="button" 
+        className="artist_add"
+        onClick={handleAdd}
+        >add</button>
         </div>
       </>
     );
@@ -134,7 +152,7 @@ export const ArtistDetail = () => {
   return (
     <>
       <section>
-        {/* {console.log("wellArr", wellArr)} */}
+        {console.log("wellArr", wellArr)}
         {console.log("userWell", currWell)}
         {/* {console.log("artistId", artistId)} */}
         {console.log("related-groups", relatedGroups)}
@@ -149,6 +167,7 @@ export const ArtistDetail = () => {
         <div>{btns}</div>
       </section>
       <section>
+        <div>Related Artists</div>
         <div>{relatedGroups[0]?.groupId}</div>
       </section>
     </>
