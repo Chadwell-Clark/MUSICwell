@@ -12,6 +12,7 @@ import { getArtistById } from "../../modules/ArtistsManager.js";
 import { getGroupsByArtistId } from "../../modules/GroupManager.js";
 import { currUser, getUserObj } from "../helpers/Helpers.js";
 import { getGroupRelatedArtists } from "../../modules/ArtistsManager.js";
+import { RelatedArtistCard } from "./RelatedArtistCard.js";
 
 export const ArtistDetail = () => {
   const [artist, setArtist] = useState({});
@@ -93,7 +94,6 @@ export const ArtistDetail = () => {
       albumId: "",
       comment: ""
     }
-
     console.log("addObj",artistAddObj)
     addArtistToWell(artistAddObj)
     .then(() => history.push(`/artistdetailedit/${+artistId}`))
@@ -106,9 +106,9 @@ export const ArtistDetail = () => {
 
   const handleDelete = (e) => {
     e.preventDefault();
-    console.log("delete");
-    deleteArtistFromWell(+artistId)
-    .then(() => history.push("/"))
+    console.log("delete", commArt.id, commArt);
+    // deleteArtistFromWell(commArt.id)
+    // .then(() => history.push("/"))
   };
 
   useEffect(() => {
@@ -116,7 +116,7 @@ export const ArtistDetail = () => {
       setArtist(a);
       usersWells();
       getRelated()
-      setIsLoading(false);
+      // setIsLoading(false);
     });
   }, []);
   
@@ -126,6 +126,7 @@ export const ArtistDetail = () => {
 
     useEffect(() => {
       getArtists();
+      setIsLoading(false);
     }, [relatedGroups])
 
   window.scroll(0, 0);
@@ -174,7 +175,13 @@ export const ArtistDetail = () => {
   //               remove artist from well(passed from parent?)
   //                edit artist comments
   //
-  
+  if (isLoading === true || !relatedArtists) {
+    return (
+      <>
+      <div className="detail_loading">Loading...</div>
+      </>
+    )
+  }else {
   return (
     <>
       <section>
@@ -193,9 +200,15 @@ export const ArtistDetail = () => {
       </section>
       <section>
         <div>Related Artists</div>
-        {relatedArtists[0].artist.name}
+        {relatedArtists.map(artist => 
+          <RelatedArtistCard key={artist.id}artist={artist}/>
+          
+        )}
+        {/* {relatedArtists[0]?.artist?.name} */}
+        
         <div>{relatedGroups[0]?.groupId}</div>
       </section>
     </>
   );
+  }
 };
