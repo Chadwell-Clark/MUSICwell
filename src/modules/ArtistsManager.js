@@ -31,12 +31,12 @@ export const getUsersArtists = (user_id) => {
 
 export const getGroupRelatedArtists = (group_id) => {
   return fetch(
-    `${remoteURL}/artists_groups/?groupId=${group_id}/&_expand=artists`
+    `${remoteURL}/artists_groups/?groupId=${group_id}&_expand=artist`
   ).then((response) => response.json());
 };
 
 export const getAlbumRelatedArtists = (album_id) => {
   return fetch(
-    `${remoteURL}/artists_albums/?albumId=${album_id}/&_embed=artists`
+    `${remoteURL}/artists_albums/?albumId=${album_id}&_embed=artists`
   ).then((response) => response.json());
 };

@@ -39,16 +39,18 @@ export const Login = () => {
   };
 
   return (
-    <main className="container--login" style={{ textAlign: "center" }}>
+    <main className="container--login">
+    {/* <main className="container--login" style={{ textAlign: "center" }}> */}
       <div className="">
         <dialog className="dialog dialog--auth" open={existDialog}>
+            <div className="dialog-inner">
           <div>User does not exist</div>
           <button
-            className="button--close"
+            className="login-btn"
             onClick={(e) => setExistDialog(false)}
-          >
-            Close
+          >Darn
           </button>
+          </div>
         </dialog>
         <div className="login-centered">
           <h1 className="login-title">&nbsp;&nbsp;Music[well]&nbsp;&nbsp;</h1>

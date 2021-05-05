@@ -6,7 +6,9 @@
 }
 
 .container_main {
-    background: #f1f1f1;
+    /* background: #f1f1f1; */
+    background: rgb(249,111,93);
+background: radial-gradient(circle, rgba(249,111,93,1) 0%, rgba(117,142,205,1) 100%);
 }
 .container_appViews {
     width: 100%;
@@ -17,18 +19,37 @@
     border-radius: 10px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
     /* padding: 20% 10%; */
-    background: #fef5ec;
+    /* background: #fef5ec; */
     /* width: 100%;
     height: 100%vh; */
     overflow:auto;
 }
+
+.container_appviews {
+background: rgba( 255, 255, 255, 0.60 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 9.0px );
+-webkit-backdrop-filter: blur( 9.0px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
 .container_search {
     border-radius: 10px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
     /* padding: 20% 10%; */
-    background: #f1f1f1;
+    /* background: #f1f1f1; */
     width: 100%;
     height: 94%vh;
+}
+.container_search {
+    z-index: 1;
+    background: rgba( 255, 255, 255, 0.60 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 9.0px );
+-webkit-backdrop-filter: blur( 9.0px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 
@@ -39,6 +60,14 @@
     background: #f1f1f1;
     width: 100%;
     height: 94%vh;
+}
+.container_yonderWells {
+    background: rgba( 255, 255, 255, 0.60 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 9.0px );
+-webkit-backdrop-filter: blur( 9.0px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 /* .container_footer {
