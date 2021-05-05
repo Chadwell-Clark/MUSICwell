@@ -107,8 +107,8 @@ export const ArtistDetail = () => {
   const handleDelete = (e) => {
     e.preventDefault();
     console.log("delete", commArt.id, commArt);
-    // deleteArtistFromWell(commArt.id)
-    // .then(() => history.push("/"))
+    deleteArtistFromWell(commArt.id)
+    .then(() => history.push("/"))
   };
 
   useEffect(() => {
