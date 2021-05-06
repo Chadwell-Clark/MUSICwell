@@ -17,9 +17,10 @@ export const ApplicationViews = ({ searchInputText }) => {
           {/* Render the component for Users Well */}
           <UserWellList />
         </Route>
-        <Route path="/artistdetail/:artistId(\d+)">
+        <Route exact path="/artistdetail/:artistId(\d+)">
           <ArtistDetail />
         </Route>
+        
         <Route path="/artistdetailedit/:artistId(\d+)">
           <ArtistDetailEdit />
         </Route>

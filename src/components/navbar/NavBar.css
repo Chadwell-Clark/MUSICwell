@@ -30,7 +30,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     letter-spacing: .2rem; 
 }
 .nav-title:hover {
-    transform: scale(1.2)
+    transform: scale(1.1)
 }
 .nav_item {
     /* border: 1px solid black; */
@@ -47,7 +47,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .nav_item:hover {
     color: #9b4646;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .nav_item:active {
   color: teal;

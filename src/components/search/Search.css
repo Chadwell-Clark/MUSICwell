@@ -5,6 +5,8 @@
 }
 .searchLabel {
     font-family: 'Zen Dots', cursive;
+    color: #3f3f3f;
+    font-weight: 500;
     margin: 1rem;
     font-size: 1.5rem;
 }
@@ -20,5 +22,14 @@ font-size: 1.1rem;
     font-size: 1rem;
 }
 .jazzStory {
-    padding: .5rem;
+    padding: .6rem;
+    font-size: 1.2rem;
+}
+
+.empty-search {
+    font-family: 'Zen Dots', cursive;
+    color: #3f3f3f;
+    font-weight: 500;
+    margin: 3rem 1rem;
+    font-size: 1.7rem;
 }

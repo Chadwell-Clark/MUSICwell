@@ -70,7 +70,10 @@ export const SearchList = ({ searchInputText }) => {
       <>
         <div>
           <div className="empty-search">
-            These are not the droids you are seaching for
+            The droids you are searching for 
+          </div>
+          <div className="empty-search">
+            must be deeper in the [well]
           </div>
         </div>
       </>

@@ -3,7 +3,8 @@
 .well_owner {
     font-family: 'Zen Dots', cursive;
     color: #3f3f3f;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    font-weight: 500;
     margin: .5rem;
     padding: .3rem;
     border-radius: 10px;
@@ -14,4 +15,21 @@
 
 .appview-overflow {
     overflow: auto;
+}
+
+.dry-well-title {
+font-family: 'Zen Dots', cursive;
+font-weight: 500;
+    color: #3f3f3f;
+    font-size: 2rem;
+    margin: 2.5rem;
+    padding: .3rem;
+}
+.dry-well {
+    font-family: 'Zen Dots', cursive;
+    font-weight: 500;
+    color: #3f3f3f;
+    font-size: 1.5rem;
+    margin: 2rem;
+    padding: .3rem;
 }
