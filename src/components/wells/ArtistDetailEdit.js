@@ -14,7 +14,13 @@ export const ArtistDetailEdit = () => {
   const [wellArr, setWellArr] = useState([]);
   const [comment, setComment] = useState()
 
-  // const [commArt, setCommArt] =useState([])
+  const [commArt, setCommArt] = useState({
+    id: 0,
+    userId: 0,
+    artistId: 0,
+    albumId: 0,
+    comment: "",
+  });
   // const [relatedGroups, setRelatedGroups] = useState([]);
   // const [relatedArtists, setRelatedArtists] = useState([]);
 
@@ -27,43 +33,49 @@ export const ArtistDetailEdit = () => {
 
   const usersWells = () => {
     getUsersWells(loggedInUser)
-    .then((res) => setCurrWell(res));
-  };
+    .then((res) => {
+      let x = res.find((comm) => +artistId === comm.artistId);
 
-  const getWellArr = () => {
-    let arr = [];
-    currWell.map((item) => {
-      if (item.artistId !== "") {
-        arr.push(item?.artistId);
-      }
-      // console.log("ArtistId", item?.artistId)
-      return item;
+      // if (currWell.artistId !== "") {    
+    setCommArt(x)
+      // setCurrWell(res)
     });
-    // console.log("arr",arr)
-    setWellArr(arr);
   };
 
-  let commArt = []
+  // const getWellArr = () => {
+  //   let arr = [];
+  //   currWell.map((item) => {
+  //     if (item.artistId !== "") {
+  //       arr.push(item?.artistId);
+  //     }
+  //     // console.log("ArtistId", item?.artistId)
+  //     return item;
+  //   });
+  //   // console.log("arr",arr)
+  //   setWellArr(arr);
+  // };
+
+  // let commArt = []
   // const getComment =() => {
-  if (currWell.artistId !== "") {    
-    commArt =(currWell.find((comm) => 
-    artist.id === comm.artistId
-    ));
-    // setComment(commArt?.comment)
-  }
+  // if (currWell.artistId !== "") {    
+  //   setCommArt(currWell.find((comm) => 
+  //   artist.id === comm.artistId
+  //   ));
+  //   // setComment(commArt?.comment)
+  // }
 // }
 
   const handleFieldChange = (e) => {
-    const stateToChange = {...comment};
+    const stateToChange = {...commArt};
     let editedVal = e.target.value;
-    console.log(editedVal);
+    // console.log(editedVal);
     stateToChange[e.target.id] = editedVal;
-    setComment(stateToChange);
+    setCommArt(stateToChange);
   };
 
   const handleDelete = (e) => {
     e.preventDefault();
-    console.log("delete", commArt.id, commArt);
+    // console.log("delete", commArt.id, commArt);
     deleteArtistFromWell(commArt.id).then(() => history.push("/"));
   };
 
@@ -71,7 +83,7 @@ export const ArtistDetailEdit = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    console.log("save",commArt)
+    // console.log("save",commArt)
     const editedComment = {
       id: commArt.id,
       userId: commArt.userId,
@@ -79,12 +91,16 @@ export const ArtistDetailEdit = () => {
       albumId: commArt.albumId,
       comment: commArt.comment,
     }
-    console.log("saveCommment", editedComment)
+    // console.log("saveCommment", editedComment)
+    editArtistInWell(editedComment)
+    .then(() => history.push(`/artistdetail/${artistId}`))
   }
 
 
   useEffect(() => {
-    getArtistById(artistId).then((a) => {
+    getArtistById(artistId)
+    .then((a) => {
+      
       setArtist(a);
       usersWells()
       //  getComment()
@@ -94,9 +110,9 @@ export const ArtistDetailEdit = () => {
     });
   }, []);
 
-  useEffect(() => {
-    getWellArr();
-  }, [currWell]);
+  // useEffect(() => {
+  //   getWellArr();
+  // }, [currWell]);
 
   // useEffect(() => {
   //     getComment()
@@ -138,7 +154,7 @@ export const ArtistDetailEdit = () => {
                 id="comment"
                 onChange={handleFieldChange}
                 className="artist_card_comment"
-                value={commArt?.comment}
+                value={commArt.comment}
                 required
                 autoFocus
                 rows="4"

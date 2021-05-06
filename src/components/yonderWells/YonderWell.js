@@ -15,14 +15,14 @@ export const YonderWell = () => {
   const [well, setWell] = useState([]);
 
   const { userId } = useParams();
-  console.log("userId", userId);
+  // console.log("userId", userId);
 
   const fillWell = (usersArtists) => {
-    console.log("usersArtist", usersArtists);
+    // console.log("usersArtist", usersArtists);
     const newArr = usersArtists.filter((artist) => {
       return artist.artistId !== "";
     });
-    console.log("newArr", newArr);
+    // console.log("newArr", newArr);
     Promise.all(
       newArr.map((singleArtist) => getArtistById(singleArtist.artistId))
     ).then((returned) => setWell(returned));
@@ -30,9 +30,9 @@ export const YonderWell = () => {
 
   const getArtists = () => {
     return getUsersWells(userId).then((artistsFromAPI) => {
-      console.log(artistsFromAPI);
+      // console.log(artistsFromAPI);
       setArtistsList(artistsFromAPI);
-      console.log("AL!", artistsList);
+      // console.log("AL!", artistsList);
       // fillWell(artistsList);
       return artistsFromAPI;
     });
@@ -40,7 +40,7 @@ export const YonderWell = () => {
 
   const getUser = () => {
     return getUserObj(userId).then((userFromAPI) => {
-      console.log(userFromAPI);
+      // console.log(userFromAPI);
       setUser(userFromAPI);
     });
   };
@@ -56,7 +56,7 @@ export const YonderWell = () => {
     getUser().then(() => getArtists());
 
     // .then(() => setIsLoading(false))
-  }, []);
+  }, [userId]);
 
   window.scroll(0, 0);
 
@@ -65,8 +65,8 @@ export const YonderWell = () => {
       <div className="appview-overflow">
         <div className="well_owner">{`${user?.firstName?.toUpperCase()}'s Yonder [well]`}</div>
         <div>
-          {console.log("comm", artistsList)}
-          {console.log("well", well)}
+          {/* {console.log("comm", artistsList)} */}
+          {/* {console.log("well", well)} */}
           {well.map((artist) => (
             <WellArtistCard
               artist={artist}

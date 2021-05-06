@@ -15,7 +15,7 @@ export const YonderWellsSide = () => {
 
   const yonderSide = () => {
     getAllWells().then((res) => {
-      console.log("getAllWells", res);
+      // console.log("getAllWells", res);
       setYonWells(
         res.filter((well) => well.userId !== user && well.artistId !== "")
       );
@@ -35,8 +35,8 @@ export const YonderWellsSide = () => {
   return (
     <>
       <div className="yonder-side-title">Drink from Yonder [well]s</div>
-      {console.log("yonWells", yonWells)}
-      {console.log("yonUsers", yonUsers)}
+      {/* {console.log("yonWells", yonWells)} */}
+      {/* {console.log("yonUsers", yonUsers)} */}
       <div>
         {yonUsers.map((u) => (
           <YonderSideCard key={u.id} user={u} />

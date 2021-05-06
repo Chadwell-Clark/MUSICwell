@@ -13,10 +13,6 @@ export const ApplicationViews = ({ searchInputText }) => {
   return (
     <>
       <div className="container_appViews">
-        <Route exact path="/">
-          {/* Render the component for Users Well */}
-          <UserWellList />
-        </Route>
         <Route exact path="/artistdetail/:artistId(\d+)">
           <ArtistDetail />
         </Route>
@@ -32,6 +28,10 @@ export const ApplicationViews = ({ searchInputText }) => {
         </Route>
         <Route path="/search">
           <SearchList searchInputText={searchInputText} />
+        </Route>
+        <Route exact path="/">
+          {/* Render the component for Users Well */}
+          <UserWellList />
         </Route>
       </div>
     </>

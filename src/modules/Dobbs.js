@@ -11,7 +11,7 @@ export const getDobbs = () => {
       .then((response) => response.json())
       //*  BELOW NOT NEEDED if not using parsed data
       .then((parsedResponse) => {
-        console.log(parsedResponse);
+        // console.log(parsedResponse);
         return parsedResponse;
       })
   );
