@@ -1,6 +1,6 @@
 
 
-export const getJoke = () => {
+export const getDobbs = () => {
   return (
     fetch("https://icanhazdadjoke.com/", {
       method: "Get",

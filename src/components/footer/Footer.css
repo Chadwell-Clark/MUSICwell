@@ -26,8 +26,18 @@ backdrop-filter: blur( 9.0px );
 /* border-radius: 10px; */
 border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
+.footer-title{
+font-size: 1.4rem;
+}
 
 .bob {
     width: 50px;
 
+}
+
+.bbdbb {
+    color:#3f3f3f;
+    font-size:1.1rem;
+    margin: 0 1rem;
+    
 }
