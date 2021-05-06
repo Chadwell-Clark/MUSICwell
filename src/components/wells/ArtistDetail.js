@@ -91,7 +91,7 @@ export const ArtistDetail = () => {
     const artistAddObj = {
       userId: loggedInUser,
       artistId: +artistId,
-      albumId: "",
+      albumId: 1,
       comment: ""
     }
     console.log("addObj",artistAddObj)
@@ -102,6 +102,7 @@ export const ArtistDetail = () => {
   const handleEdit = (e) => {
     e.preventDefault();
     console.log("edit");
+    history.push(`/artistdetailedit/${+artistId}`);
   };
 
   const handleDelete = (e) => {
@@ -128,6 +129,8 @@ export const ArtistDetail = () => {
       getArtists();
       setIsLoading(false);
     }, [relatedGroups])
+
+    useEffect(() => {}, [artistId]);
 
   window.scroll(0, 0);
 
@@ -164,7 +167,7 @@ export const ArtistDetail = () => {
         type="button" 
         className="artist_add"
         onClick={handleAdd}
-        >Add Artist</button>
+        >Add to your [well]</button>
         </div>
       </>
     );
@@ -190,8 +193,8 @@ export const ArtistDetail = () => {
         {/* {console.log("artistId", artistId)} */}
         {console.log("related-groups", relatedGroups)}
         {console.log("related-artists", relatedArtists)}
+        <div className="detail-artist-name">{artist?.name}</div>
         <img src={artist?.imageURL} alt={artist?.name} />
-        <div>{artist?.name}</div>
         <div>{artist?.blurb}</div>
         <div>{artist?.roles}</div>
         <a href={artist?.infoURL}>{artist?.infoURL}</a>
@@ -206,7 +209,7 @@ export const ArtistDetail = () => {
         )}
         {/* {relatedArtists[0]?.artist?.name} */}
         
-        <div>{relatedGroups[0]?.groupId}</div>
+        {/* <div>{relatedGroups[0]?.groupId}</div> */}
       </section>
     </>
   );

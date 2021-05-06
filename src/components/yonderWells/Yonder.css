@@ -2,7 +2,9 @@
 
 .yonder-side-title {
     font-family: 'Zen Dots', cursive;
+    color: #3f3f3f;
     font-size: 1.3rem;
+    font-weight: 500;
 }
 .yonder-link {
     font-family: 'Zen Dots', cursive;

@@ -72,6 +72,7 @@ export const UserWellList = ({ id }) => {
     // .then(() => setIsLoading(false))
   }, []);
 
+  if (well.length > 0 ) {
   return (
     <>
       <div className="appview-overflow">
@@ -90,5 +91,26 @@ export const UserWellList = ({ id }) => {
         </div>
       </div>
     </>
-  );
+  ) 
+          } else {
+            return (
+              <>
+                <div className="dry-well-title"> This [well] is dry...</div>
+                <br className="dry-well" />
+                <br className="dry-well" />
+
+                <div className="dry-well">
+                  Search for an artist &#10132; 
+                </div>
+                <br className="dry-well" />
+                <br className="dry-well" />
+                <div className="dry-well">or</div>
+                <br className="dry-well" />
+                <br className="dry-well" />
+                <div className="dry-well">
+                  Take a gander at Yonder [well]s &#10132; 
+                </div>
+              </>
+            );
+          }
 };

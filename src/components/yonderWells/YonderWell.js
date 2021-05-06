@@ -63,7 +63,7 @@ export const YonderWell = () => {
   return (
     <>
       <div className="appview-overflow">
-        <div className="well_owner">{`${user?.firstName?.toUpperCase()}'s [well]`}</div>
+        <div className="well_owner">{`${user?.firstName?.toUpperCase()}'s Yonder [well]`}</div>
         <div>
           {console.log("comm", artistsList)}
           {console.log("well", well)}
