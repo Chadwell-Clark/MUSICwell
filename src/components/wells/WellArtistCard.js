@@ -16,9 +16,9 @@ export const WellArtistCard = ({ artist, artistsList, userId }) => {
       return artist.id === comm.artistId;
     });
   }
-  console.log("Logged IN", loggedInUser);
-  console.log("current well", artistsList[0].userId);
-  console.log("artistlist", artistsList);
+  // console.log("Logged IN", loggedInUser);
+  // console.log("current well", artistsList[0].userId);
+  // console.log("artistlist", artistsList);
   let btns = "";
   if (artistsList[0].userId === loggedInUser) {
     btns = (
@@ -43,8 +43,8 @@ export const WellArtistCard = ({ artist, artistsList, userId }) => {
     );
   }
 
-  console.log("artist", artist);
-  console.log("artistsList", artistsList);
+  // console.log("artist", artist);
+  // console.log("artistsList", artistsList);
   return (
     <>
       <div className="artist_card">
@@ -65,7 +65,8 @@ export const WellArtistCard = ({ artist, artistsList, userId }) => {
             <div className="artist_card_top_btn">{btns}</div>
           </div>
           {/* <div className="artist_card_sec"> */}
-          <div className="artist_card_comment">{commArt?.comment}</div>
+          {commArt?.comment !== ""?<div className="artist_card_comment">{commArt?.comment}</div> : ""}
+          {/* <div className="artist_card_comment">{commArt?.comment}</div> */}
           {/* <div className="artist_card__bot_btn">comment btn logic</div> */}
           {/* </div> */}
         </div>

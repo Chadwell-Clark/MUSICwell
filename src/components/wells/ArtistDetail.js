@@ -70,7 +70,7 @@ export const ArtistDetail = () => {
   const getArtists =() => {
     // let artistArr = []
     Promise.all(relatedGroups.map((group) => {
-      console.log("groupId",group.groupId)
+      // console.log("groupId",group.groupId)
         return getGroupRelatedArtists(group.groupId)}))
       .then((parsed) => {
         // console.log("parsed",parsed)
@@ -78,7 +78,7 @@ export const ArtistDetail = () => {
         // parsed.forEach(arr => compArr.concat(arr))
         // setRelatedArtists(...parsed)
         parsed = parsed.reduce((a, b) => a.concat(b), []);
-        console.log("compArr",parsed)
+        // console.log("compArr",parsed)
         setRelatedArtists(parsed)
       })
     
@@ -94,20 +94,20 @@ export const ArtistDetail = () => {
       albumId: 1,
       comment: ""
     }
-    console.log("addObj",artistAddObj)
+    // console.log("addObj",artistAddObj)
     addArtistToWell(artistAddObj)
     .then(() => history.push(`/artistdetailedit/${+artistId}`))
   }
 
   const handleEdit = (e) => {
     e.preventDefault();
-    console.log("edit");
+    // console.log("edit");
     history.push(`/artistdetailedit/${+artistId}`);
   };
 
   const handleDelete = (e) => {
     e.preventDefault();
-    console.log("delete", commArt.id, commArt);
+    // console.log("delete", commArt.id, commArt);
     deleteArtistFromWell(commArt.id)
     .then(() => history.push("/"))
   };
@@ -119,7 +119,7 @@ export const ArtistDetail = () => {
       getRelated()
       // setIsLoading(false);
     });
-  }, []);
+  }, [artistId]);
   
     useEffect(() => {
       getWellArr();
@@ -130,7 +130,6 @@ export const ArtistDetail = () => {
       setIsLoading(false);
     }, [relatedGroups])
 
-    useEffect(() => {}, [artistId]);
 
   window.scroll(0, 0);
 
@@ -191,8 +190,8 @@ export const ArtistDetail = () => {
         {/* {console.log("wellArr", wellArr)} */}
         {/* {console.log("userWell", currWell)} */}
         {/* {console.log("artistId", artistId)} */}
-        {console.log("related-groups", relatedGroups)}
-        {console.log("related-artists", relatedArtists)}
+        {/* {console.log("related-groups", relatedGroups)} */}
+        {/* {console.log("related-artists", relatedArtists)} */}
         <div className="detail-artist-name">{artist?.name}</div>
         <img src={artist?.imageURL} alt={artist?.name} />
         <div>{artist?.blurb}</div>

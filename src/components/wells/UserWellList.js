@@ -32,7 +32,7 @@ export const UserWellList = ({ id }) => {
 
   const getArtists = () => {
     return getUsersWells(userId).then((artistsFromAPI) => {
-      console.log(artistsFromAPI);
+      // console.log(artistsFromAPI);
       setArtistsList(artistsFromAPI);
       // console.log("AL!",artistsList);
       // fillWell(artistsList);
@@ -50,7 +50,7 @@ export const UserWellList = ({ id }) => {
 
   const getUser = () => {
     return getUserObj(userId).then((userFromAPI) => {
-      console.log(userFromAPI);
+      // console.log(userFromAPI);
       setUser(userFromAPI);
     });
   };
@@ -78,8 +78,8 @@ export const UserWellList = ({ id }) => {
       <div className="appview-overflow">
         <div className="well_owner">{`${user?.firstName?.toUpperCase()}'s [well]`}</div>
         <div>
-          {console.log("comm", artistsList)}
-          {console.log("well", well)}
+          {/* {console.log("comm", artistsList)} */}
+          {/* {console.log("well", well)} */}
           {well.map((artist) => (
             <WellArtistCard
               artist={artist}

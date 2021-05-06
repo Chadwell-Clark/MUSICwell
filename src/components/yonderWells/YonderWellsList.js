@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { currUser } from "../helpers/Helpers.js";
 import { getAllWells } from "../../modules/WellsManager.js";
 import { getAllUsers } from "../../modules/UsersManager.js";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { YonderSideCard } from "./YonderSideCard.js";
 import "./Yonder.css";
 
@@ -15,7 +15,7 @@ export const YonderWellsList = () => {
 
   const yonderSide = () => {
     getAllWells().then((res) => {
-      console.log("getAllWells", res);
+      // console.log("getAllWells", res);
       setYonWells(
         res.filter((well) => well.userId !== user && well.artistId !== "")
       );
@@ -35,8 +35,8 @@ export const YonderWellsList = () => {
   return (
     <>
       <div className="yonder-side-title">Drink from Yonder [well]s</div>
-      {console.log("yonWells", yonWells)}
-      {console.log("yonUsers", yonUsers)}
+      {/* {console.log("yonWells", yonWells)} */}
+      {/* {console.log("yonUsers", yonUsers)} */}
       <div>
         {yonUsers.map((u) => (
           <YonderSideCard key={u.id} user={u} />

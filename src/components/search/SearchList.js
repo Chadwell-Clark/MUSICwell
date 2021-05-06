@@ -18,7 +18,7 @@ export const SearchList = ({ searchInputText }) => {
 
   const userId = currUser();
 
-  console.log("result", searchResult);
+  // console.log("result", searchResult);
 
   // const getArtists = () => {
   //   return getUsersWells(userId).then((artistsFromAPI) => {
@@ -47,7 +47,7 @@ export const SearchList = ({ searchInputText }) => {
   //     }
   // //   getArtists();
   // }, []);
-  console.log("userWells", userWells);
+  // console.log("userWells", userWells);
   if (searchResult.length > 0) {
     return (
       <>

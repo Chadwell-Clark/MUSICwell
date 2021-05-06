@@ -1,6 +1,6 @@
 
 
-export const getJoke = () => {
+export const getDobbs = () => {
   return (
     fetch("https://icanhazdadjoke.com/", {
       method: "Get",
@@ -11,7 +11,7 @@ export const getJoke = () => {
       .then((response) => response.json())
       //*  BELOW NOT NEEDED if not using parsed data
       .then((parsedResponse) => {
-        console.log(parsedResponse);
+        // console.log(parsedResponse);
         return parsedResponse;
       })
   );

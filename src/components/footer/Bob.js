@@ -3,10 +3,18 @@
 import React from "react";
 import bob from "../../assets/bob.png";
 
-export const Bob = () => {
+
+export const Bob = ({handleBob}) => {
+ 
+
   return (
     <>
-      <img className="bob" src={bob} alt="Bob" />
+      <img 
+      className="bob" 
+      onClick={handleBob}
+      src={bob} 
+      alt="Bob" 
+      />
     </>
   );
 };
