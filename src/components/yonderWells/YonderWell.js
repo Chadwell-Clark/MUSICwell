@@ -1,7 +1,7 @@
 //     *****     Chad[well] Clark 2021     *****     //
 
 import React, { useState, useEffect } from "react";
-import { currUser, getUserObj } from "../helpers/Helpers.js";
+import {  getUserObj } from "../helpers/Helpers.js";
 import { getUsersWells } from "../../modules/WellsManager.js";
 import { getArtistById } from "../../modules/ArtistsManager.js";
 import { WellArtistCard } from "../wells/WellArtistCard.js";

@@ -4,10 +4,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./WellArtistCard.css";
-import { currUser, getUserObj } from "../helpers/Helpers.js";
+import { currUser } from "../helpers/Helpers.js";
 
 export const WellArtistCard = ({ artist, artistsList, userId }) => {
-  const user = userId;
+  // const user = userId;
   const loggedInUser = currUser();
   // console.log("artist card", artist)
   let commArt = [];
@@ -20,7 +20,7 @@ export const WellArtistCard = ({ artist, artistsList, userId }) => {
   // console.log("current well", artistsList[0].userId);
   // console.log("artistlist", artistsList);
   let btns = "";
-  if (artistsList[0].userId === loggedInUser) {
+  if (artistsList[0]?.userId === loggedInUser) {
     btns = (
       <>
         {" "}

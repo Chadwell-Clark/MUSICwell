@@ -1,9 +1,8 @@
 //     *****     Chad[well] Clark 2021     *****     //
 
 import {
-  remoteURL,
-  currUser,
-  getCurrUser,
+  remoteURL
+  
 } from "../components/helpers/Helpers.js";
 
 export const searchArtists = (text) => {

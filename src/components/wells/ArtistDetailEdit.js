@@ -5,14 +5,14 @@ import { useParams, useHistory } from "react-router-dom";
 import { getUsersWells, deleteArtistFromWell, editArtistInWell} from "../../modules/WellsManager.js";
 import { getArtistById } from "../../modules/ArtistsManager.js";
 // import { getGroupsByArtistId } from "../../modules/GroupManager.js";
-import { currUser, getUserObj } from "../helpers/Helpers.js";
+import { currUser } from "../helpers/Helpers.js";
 // import { getGroupRelatedArtists } from "../../modules/ArtistsManager.js";
 
 export const ArtistDetailEdit = () => {
   const [artist, setArtist] = useState({});
-  const [currWell, setCurrWell] = useState([]);
-  const [wellArr, setWellArr] = useState([]);
-  const [comment, setComment] = useState()
+  // const [currWell, setCurrWell] = useState([]);
+  // const [wellArr, setWellArr] = useState([]);
+  // const [comment, setComment] = useState()
 
   const [commArt, setCommArt] = useState({
     id: 0,

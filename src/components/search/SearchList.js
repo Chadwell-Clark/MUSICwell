@@ -2,12 +2,12 @@
 
 import React, { useEffect, useState } from "react";
 import {
-  getUsersArtists,
-  searchArtists,
+  
+  searchArtists
 } from "../../modules/ArtistsManager.js";
 import { ArtistCard } from "./ArtistCard.js";
 import { getUsersWells } from "../../modules/WellsManager.js";
-import { currUser, getUserObj } from "../helpers/Helpers.js";
+import { currUser } from "../helpers/Helpers.js";
 import "./Search.css";
 
 export const SearchList = ({ searchInputText }) => {

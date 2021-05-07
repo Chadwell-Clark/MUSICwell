@@ -1,6 +1,6 @@
 //     *****     Chad[well] Clark 2021     *****     //
 
-import { remoteURL, currUser } from "../components/helpers/Helpers.js";
+import { remoteURL } from "../components/helpers/Helpers.js";
 
 export const getAllGroups = () => {
   return fetch(`${remoteURL}/groups`)

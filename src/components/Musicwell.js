@@ -60,15 +60,7 @@ export const Musicwell = () => {
                     >
                       <YonderWellsSide />
                     </Cell>
-                    {/* <Cell
-                    className="container_footer"
-                    center
-                    middle
-                    width={2}
-                    height={2}
-                  >
-                    <Footer /> */}
-                    {/* </Cell> */}
+                    
                   </Grid>
                   <Footer />
                 </div>
