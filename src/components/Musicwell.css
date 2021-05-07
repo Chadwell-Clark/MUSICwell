@@ -89,3 +89,9 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     background: #E1e6f4;
 } */
 
+.related-title {
+    font-family: 'Zen Dots', cursive;
+    color: #3f3f3f;
+    font-size: 1.3rem;
+    margin: 2rem;
+}

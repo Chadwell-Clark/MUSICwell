@@ -142,16 +142,18 @@ export const ArtistDetail = () => {
     btns = (
       <>
         <div>
-          <button type="button" 
-          className="artist_detail_edit"
-          onClick={handleEdit}>
+          <button
+            type="button"
+            className="artist_detail_edit artist-btn"
+            onClick={handleEdit}
+          >
             Edit Comments
           </button>
-          <button 
-          type="button" 
-          className="artist_delete"
-          onClick={handleDelete}>
-            
+          <button
+            type="button"
+            className="artist_delete artist-btn"
+            onClick={handleDelete}
+          >
             Remove Artist
           </button>
           <div className="artist_card_comment">{commArt?.comment}</div>
@@ -164,7 +166,7 @@ export const ArtistDetail = () => {
       <div>
         <button 
         type="button" 
-        className="artist_add"
+        className="artist_add artist-btn"
         onClick={handleAdd}
         >Add to your [well]</button>
         </div>
