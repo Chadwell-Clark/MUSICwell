@@ -1,6 +1,6 @@
 //     *****     Chad[well] Clark 2021     *****     //
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { getBinaryJazz } from "../../modules/BinaryJazz.js";
 import "./Search.css";
 // import { getAllArtists } from "../../modules/ArtistsManager.js";

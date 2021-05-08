@@ -1,8 +1,8 @@
 //     *****     Chad[well] Clark 2021     *****     //
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 // import "./WellArtistCard.css";
-import { currUser, getUserObj } from "../helpers/Helpers.js";
+import { currUser } from "../helpers/Helpers.js";
 import { Link } from "react-router-dom";
 
 export const ArtistCard = ({ artist, userWells }) => {

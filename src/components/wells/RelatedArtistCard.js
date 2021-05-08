@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 
-import { useHistory, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export const RelatedArtistCard = ({ artist }) => {
+export const RelatedArtistCard = ({ relArt , artist }) => {
 
 // const history = useHistory()
 
@@ -12,15 +12,20 @@ export const RelatedArtistCard = ({ artist }) => {
 //     console.log(artist?.artist?.id);
 //     history.push(`/artistdetail/${+artist?.artistId}`);
 // }
+console.log("artist",artist)
+console.log("related",relArt)
 
 
+if(relArt.artistId === artist.id) {
+  return <></>
+} else {
   return (
     <>
       {/* <Link to={`/artistdetail/${artist.id}`}> */}
       <div className="related-artist-link">
-        {artist?.artist?.name?.toUpperCase()}
+        {relArt?.artist?.name?.toUpperCase()}
       </div>
-      <Link to={`/artistdetail/${artist.artist.id}`}>
+      <Link to={`/artistdetail/${relArt.artist.id}`}>
         <button className="artist_detail"> Artist Details</button>
       </Link>
       {/* <button className="artist_detail" onClick={handleClick}> Artist Details</button> */}
@@ -28,6 +33,7 @@ export const RelatedArtistCard = ({ artist }) => {
       {/* </Link> */}
     </>
   );
+}
 };
 
 

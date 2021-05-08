@@ -2,25 +2,24 @@
 
 import React, { useEffect, useState } from "react";
 import { currUser } from "../helpers/Helpers.js";
-import { getAllWells } from "../../modules/WellsManager.js";
+// import { getAllWells } from "../../modules/WellsManager.js";
 import { getAllUsers } from "../../modules/UsersManager.js";
-import { Link } from "react-router-dom";
 import { YonderSideCard } from "./YonderSideCard.js";
 import "./Yonder.css";
 
 export const YonderWellsSide = () => {
-  const [yonWells, setYonWells] = useState([]);
+  // const [yonWells, setYonWells] = useState([]);
   const [yonUsers, setYonUsers] = useState([]);
   const user = currUser();
 
-  const yonderSide = () => {
-    getAllWells().then((res) => {
-      // console.log("getAllWells", res);
-      setYonWells(
-        res.filter((well) => well.userId !== user && well.artistId !== "")
-      );
-    });
-  };
+  // const yonderSide = () => {
+  //   getAllWells().then((res) => {
+  //     // console.log("getAllWells", res);
+  //     setYonWells(
+  //       res.filter((well) => well.userId !== user && well.artistId !== "")
+  //     );
+  //   });
+  // };
   const allUsers = () => {
     getAllUsers().then((res) => {
       setYonUsers(res.filter((u) => u.id !== user));
@@ -28,7 +27,7 @@ export const YonderWellsSide = () => {
   };
 
   useEffect(() => {
-    yonderSide();
+    // yonderSide();
     allUsers();
   }, []);
 

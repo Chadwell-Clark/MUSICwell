@@ -10,7 +10,7 @@ import {
 } from "../../modules/WellsManager.js";
 import { getArtistById } from "../../modules/ArtistsManager.js";
 import { getGroupsByArtistId } from "../../modules/GroupManager.js";
-import { currUser, getUserObj } from "../helpers/Helpers.js";
+import { currUser } from "../helpers/Helpers.js";
 import { getGroupRelatedArtists } from "../../modules/ArtistsManager.js";
 import { RelatedArtistCard } from "./RelatedArtistCard.js";
 
@@ -172,11 +172,7 @@ export const ArtistDetail = () => {
     );
   }
 
-  //        Functionality:
   
-  //               remove artist from well(passed from parent?)
-  //                edit artist comments
-  //
   if (isLoading === true || !relatedArtists) {
     return (
       <>
@@ -197,17 +193,16 @@ export const ArtistDetail = () => {
         <div>{artist?.blurb}</div>
         <div>{artist?.roles}</div>
         <a href={artist?.infoURL}>{artist?.infoURL}</a>
-        
+
         <div>{btns}</div>
       </section>
       <section>
-        <div>Related Artists</div>
-        {relatedArtists.map(artist => 
-          <RelatedArtistCard key={artist.id}artist={artist}/>
-          
-        )}
+        <div className="related-title">Related Artists</div>
+        {relatedArtists.map((relArt) => (
+          <RelatedArtistCard key={relArt.id} relArt={relArt} artist={artist}/>
+        ))}
         {/* {relatedArtists[0]?.artist?.name} */}
-        
+
         {/* <div>{relatedGroups[0]?.groupId}</div> */}
       </section>
     </>
