@@ -131,7 +131,7 @@ export const ArtistDetail = () => {
     }, [relatedGroups])
 
 
-  window.scroll(0, 0);
+  
 
   //   ***   If artist is in logged in user's well add edit and delete buttons and comment
   //   ***        if not then present an add artist button
@@ -174,7 +174,7 @@ export const ArtistDetail = () => {
     );
   }
 
-  
+  window.scroll(0, 0);
   if (isLoading === true || !relatedArtists) {
     return (
       <>
@@ -191,7 +191,7 @@ export const ArtistDetail = () => {
         {/* {console.log("related-groups", relatedGroups)} */}
         {/* {console.log("related-artists", relatedArtists)} */}
         <div className="detail-artist-name">{artist?.name}</div>
-        <img src={artist?.imageURL} alt={artist?.name} />
+        <img className="detail_img" src={artist?.imageURL} alt={artist?.name} />
         <div>{artist?.blurb}</div>
         <div>{artist?.roles}</div>
         <a href={artist?.infoURL}>{artist?.infoURL}</a>
