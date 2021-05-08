@@ -131,7 +131,7 @@ export const ArtistDetail = () => {
     }, [relatedGroups])
 
 
-  window.scroll(0, 0);
+  
 
   //   ***   If artist is in logged in user's well add edit and delete buttons and comment
   //   ***        if not then present an add artist button
@@ -142,16 +142,18 @@ export const ArtistDetail = () => {
     btns = (
       <>
         <div>
-          <button type="button" 
-          className="artist_detail_edit"
-          onClick={handleEdit}>
+          <button
+            type="button"
+            className="artist_detail_edit artist-btn"
+            onClick={handleEdit}
+          >
             Edit Comments
           </button>
-          <button 
-          type="button" 
-          className="artist_delete"
-          onClick={handleDelete}>
-            
+          <button
+            type="button"
+            className="artist_delete artist-btn"
+            onClick={handleDelete}
+          >
             Remove Artist
           </button>
           <div className="artist_card_comment">{commArt?.comment}</div>
@@ -164,7 +166,7 @@ export const ArtistDetail = () => {
       <div>
         <button 
         type="button" 
-        className="artist_add"
+        className="artist_add artist-btn"
         onClick={handleAdd}
         >Add to your [well]</button>
         </div>
@@ -172,7 +174,7 @@ export const ArtistDetail = () => {
     );
   }
 
-  
+  window.scroll(0, 0);
   if (isLoading === true || !relatedArtists) {
     return (
       <>
@@ -189,7 +191,7 @@ export const ArtistDetail = () => {
         {/* {console.log("related-groups", relatedGroups)} */}
         {/* {console.log("related-artists", relatedArtists)} */}
         <div className="detail-artist-name">{artist?.name}</div>
-        <img src={artist?.imageURL} alt={artist?.name} />
+        <img className="detail_img" src={artist?.imageURL} alt={artist?.name} />
         <div>{artist?.blurb}</div>
         <div>{artist?.roles}</div>
         <a href={artist?.infoURL}>{artist?.infoURL}</a>

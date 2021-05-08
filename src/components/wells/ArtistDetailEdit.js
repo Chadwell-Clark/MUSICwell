@@ -7,6 +7,7 @@ import { getArtistById } from "../../modules/ArtistsManager.js";
 // import { getGroupsByArtistId } from "../../modules/GroupManager.js";
 import { currUser } from "../helpers/Helpers.js";
 // import { getGroupRelatedArtists } from "../../modules/ArtistsManager.js";
+import "./ArtistDetail.css";
 
 export const ArtistDetailEdit = () => {
   const [artist, setArtist] = useState({});
@@ -150,6 +151,7 @@ export const ArtistDetailEdit = () => {
             <form>
               <label htmlFor="comment"></label>
               <textarea
+              placeholder="Comments, thoughts and reviews of artist... Maybe a nice recipe"
                 type="textarea"
                 id="comment"
                 onChange={handleFieldChange}
@@ -160,7 +162,7 @@ export const ArtistDetailEdit = () => {
                 rows="4"
                 cols="50"
               />
-              <button onClick={saveComment} className="artist_detail_edit">
+              <button onClick={saveComment} className="artist-btn artist_detail_edit">
                 Save Comments
               </button>
             </form>

@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
+import "./ArtistDetail.css";
 
 export const RelatedArtistCard = ({ relArt , artist }) => {
 
@@ -26,7 +27,7 @@ if(relArt.artistId === artist.id) {
         {relArt?.artist?.name?.toUpperCase()}
       </div>
       <Link to={`/artistdetail/${relArt.artist.id}`}>
-        <button className="artist_detail"> Artist Details</button>
+        <button className="related_artist_detail"> Artist Details</button>
       </Link>
       {/* <button className="artist_detail" onClick={handleClick}> Artist Details</button> */}
 
