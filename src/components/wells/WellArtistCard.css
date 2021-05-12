@@ -13,14 +13,26 @@
 .artist_card_img {
     width: 200px;
     height:auto;
+    align-items: center;
 }
 .artist_card_sec {
     display:flex;
-    justify-content: space-between;
+    margin-left: 20%;
+    /* justify-content: center; */
 }
 .artist_card_info {
     max-width: 40%;
 }
+.artist_card_name {
+    font-family: 'Zen Dots', cursive;
+    padding: .5rem;
+    font-size: 1rem;
+}
+.artist_card_blurb {
+    text-align: left;
+   width:fit-content;
+}
+
 .artist_card_comment {
     margin: .3rem;
     padding: .3rem;
@@ -33,12 +45,23 @@
     color: #3f3f3f;
     font-size: 1.3rem;
 }
+/* .artist_card_top_btn {
 
+    justify-content:right;
+} */
 .artist_detail {
      /* width: 20%; */
+     /* position: absolute;
+     top:0px;
+     right: 0px; */
     font-size: 1.1rem;
     padding: .3rem .4rem;
     font-weight: 600;
     background: #729b79bd;
     border-radius: 6px;
 }
+/* .artist_card_top_btn {
+    position: absolute;
+     top:0px;
+     right: 0px;
+} */

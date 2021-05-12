@@ -4,7 +4,7 @@ import React from "react";
 import "./NavBar.css";
 import { Grid, Cell } from "styled-css-grid";
 import { Logo } from "./Logo.js";
-import { Link, useHistory } from "react-router-dom";
+import { NavLink, Link, useHistory } from "react-router-dom";
 
 
 export const NavBar = () => {
@@ -24,14 +24,19 @@ export const NavBar = () => {
             <Logo />
           </Cell>
           <Cell middle center width={4}>
-            <Link className="nav_item" to="/">
+            <NavLink activeclassName="active" className="nav_item"  exact to="/">
               My [well]{" "}
-            </Link>
+            </NavLink>
           </Cell>
           <Cell middle center width={4}>
-            <Link className="nav_item" to="/yonderwellslist">
+            <NavLink
+              activeclassName="active"
+              className="nav_item"
+              
+              to="/yonderwellslist"
+            >
               Yonder [well]s{" "}
-            </Link>
+            </NavLink>
           </Cell>
 
           <Cell middle center width={8}>
@@ -40,9 +45,9 @@ export const NavBar = () => {
 
           <Cell middle center width={4}>
             {/* <Link className="nav_item logout" to="/login"> */}
-              <span className="nav_item logout"  onClick={handleLogout}>
-                Logout
-              </span>
+            <span className="nav_item logout" onClick={handleLogout}>
+              Logout
+            </span>
             {/* </Link> */}
           </Cell>
         </Grid>
