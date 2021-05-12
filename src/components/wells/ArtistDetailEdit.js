@@ -65,6 +65,19 @@ export const ArtistDetailEdit = () => {
   //   // setComment(commArt?.comment)
   // }
 // }
+  const tx = document.getElementsByTagName("textarea");
+  for (let i = 0; i < tx.length; i++) {
+    tx[i].setAttribute(
+      "style",
+      "height:" + tx[i].scrollHeight + "px;overflow-y:hidden;"
+    );
+    tx[i].addEventListener("input", OnInput, false);
+  }
+
+  function OnInput() {
+    this.style.height = "auto";
+    this.style.height = this.scrollHeight + "px";
+  }
 
   const handleFieldChange = (e) => {
     const stateToChange = {...commArt};
@@ -151,7 +164,7 @@ export const ArtistDetailEdit = () => {
             <form>
               <label htmlFor="comment"></label>
               <textarea
-              placeholder="Comments, thoughts and reviews of artist... Maybe a nice recipe"
+                placeholder="Comments, thoughts and reviews of artist... Maybe a nice recipe"
                 type="textarea"
                 id="comment"
                 onChange={handleFieldChange}
@@ -159,10 +172,14 @@ export const ArtistDetailEdit = () => {
                 value={commArt.comment}
                 required
                 autoFocus
-                rows="4"
+                rows="10"
                 cols="50"
               />
-              <button onClick={saveComment} className="artist-btn artist_detail_edit">
+              
+              <button
+                onClick={saveComment}
+                className="artist-btn artist_detail_edit"
+              >
                 Save Comments
               </button>
             </form>
