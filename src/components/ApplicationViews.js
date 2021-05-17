@@ -10,13 +10,15 @@ import { YonderWell } from "./yonderwells/YonderWell.js";
 import { SearchList } from "./search/SearchList.js";
 
 export const ApplicationViews = ({ searchInputText }) => {
+  // window.scroll(0, 0);
   return (
     <>
+    {window.scrollTo(0, 0)}
       <div className="container_appViews">
         <Route exact path="/artistdetail/:artistId(\d+)">
           <ArtistDetail />
         </Route>
-        
+
         <Route path="/artistdetailedit/:artistId(\d+)">
           <ArtistDetailEdit />
         </Route>

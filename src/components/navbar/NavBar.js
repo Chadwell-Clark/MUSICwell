@@ -24,13 +24,13 @@ export const NavBar = () => {
             <Logo />
           </Cell>
           <Cell middle center width={4}>
-            <NavLink activeclassName="active" className="nav_item"  exact to="/">
+            <NavLink activeclassname="active" className="nav_item"  exact to="/">
               My [well]{" "}
             </NavLink>
           </Cell>
           <Cell middle center width={4}>
             <NavLink
-              activeclassName="active"
+              activeclassname="active"
               className="nav_item"
               
               to="/yonderwellslist"

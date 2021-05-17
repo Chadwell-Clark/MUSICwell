@@ -116,7 +116,9 @@ export const ArtistDetail = () => {
     getArtistById(artistId).then((a) => {
       setArtist(a);
       usersWells();
-      getRelated()
+      getRelated();
+      //  window.scrollTo(0, 0);
+      
       // setIsLoading(false);
     });
   }, [artistId]);
@@ -127,6 +129,7 @@ export const ArtistDetail = () => {
 
     useEffect(() => {
       getArtists();
+      // window.scrollTo(0, 0);
       setIsLoading(false);
     }, [relatedGroups])
 
@@ -174,7 +177,7 @@ export const ArtistDetail = () => {
     );
   }
 
-  window.scroll(0, 0);
+  // window.scroll(0, 0);
   if (isLoading === true || !relatedArtists) {
     return (
       <>
@@ -182,8 +185,10 @@ export const ArtistDetail = () => {
       </>
     )
   }else {
+    // window.scroll(0, 0);
   return (
     <>
+      {/* {window.scrollTo(0, 0)} */}
       <section>
         {/* {console.log("wellArr", wellArr)} */}
         {/* {console.log("userWell", currWell)} */}
@@ -201,7 +206,7 @@ export const ArtistDetail = () => {
       <section>
         <div className="related-title">Related Artists</div>
         {relatedArtists.map((relArt) => (
-          <RelatedArtistCard key={relArt.id} relArt={relArt} artist={artist}/>
+          <RelatedArtistCard key={relArt.id} relArt={relArt} artist={artist} />
         ))}
         {/* {relatedArtists[0]?.artist?.name} */}
 

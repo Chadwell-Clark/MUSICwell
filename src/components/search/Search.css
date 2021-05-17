@@ -1,8 +1,6 @@
 /* //     *****     Chad[well] Clark 2021     *****     // */
 
-.search-side {
-    
-}
+
 .searchLabel {
     font-family: 'Zen Dots', cursive;
     color: #3f3f3f;
@@ -32,6 +30,27 @@ font-size: 1.1rem;
     font-weight: 500;
     margin: 3rem 1rem;
     font-size: 1.7rem;
+}
+.search-results {
+    
+    font-family: 'Zen Dots', cursive;
+    color: #3f3f3f;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: .5rem;
+    padding: .3rem;
+    border-radius: 10px;
+    background: #f19a3e80;
+    box-shadow: rgba(17, 17, 26, 0.15) 1px 1px 1px, rgba(17, 17, 26, 0.15) 1px 1px 8px;
+
+}
+.searchBtn {
+width: 20%;
+    font-size: 1.1rem;
+    padding: .3rem .4rem;
+    font-weight: 600;
+    background: #729b79bd;
+    border-radius: 6px;
 }
 
 /* .search_card_name {
