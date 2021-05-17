@@ -1,4 +1,4 @@
-![Well](https://user-images.githubusercontent.com/70447532/118552996-543eb200-b725-11eb-8896-703bd881a0ea.png)
+
 # MUSIC[well]
 
 MUSIC[well] is an application for filling your musical [well] with artists based on their relationships to other artist. You can relate how you came to know your artists, add comments and reviews.
@@ -33,5 +33,9 @@ The registration is for purposes of proof of concept and has no security employe
 ## TechStack
 
 The Trifecta of web Development-- HTML, CSS and Javascript using React and styled-css-grid.
+
+![Well](https://user-images.githubusercontent.com/70447532/118552996-543eb200-b725-11eb-8896-703bd881a0ea.png)
+![Component 1](https://user-images.githubusercontent.com/70447532/118554079-b1873300-b726-11eb-9230-270a5396dc36.png)
+
 
 
