@@ -81,7 +81,7 @@ export const SearchSide = ({ searchInputText, setSearchInputText }) => {
           </button>
         </div>
         <div>
-          <button className="searchBin Btn" onClick={handleClick}>
+          <button className="searchBtn Btn" onClick={handleClick}>
             Story
           </button>
           <div className="jazzStory">{jazz}</div>

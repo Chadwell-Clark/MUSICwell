@@ -34,7 +34,7 @@ export const YonderWellsList = () => {
 
   return (
     <>
-      <div className="yonder-side-title">Drink from Yonder [well]s</div>
+      <div className="yonder-title">Drink from Yonder [well]s</div>
       {/* {console.log("yonWells", yonWells)} */}
       {/* {console.log("yonUsers", yonUsers)} */}
       <div>

@@ -13,8 +13,8 @@ export const RelatedArtistCard = ({ relArt , artist }) => {
 //     console.log(artist?.artist?.id);
 //     history.push(`/artistdetail/${+artist?.artistId}`);
 // }
-console.log("artist",artist)
-console.log("related",relArt)
+// console.log("artist",artist)
+// console.log("related",relArt)
 
 
 if(relArt.artistId === artist.id) {

@@ -52,7 +52,7 @@ export const SearchList = ({ searchInputText }) => {
     return (
       <>
         <div>
-          <div>Artist Search Results</div>
+          <div className="search-results">Artist Search Results</div>
           <div>
             {searchResult.map((artist) => (
               <ArtistCard

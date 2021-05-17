@@ -3,12 +3,25 @@
 .yonder-side-title {
     font-family: 'Zen Dots', cursive;
     color: #3f3f3f;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 500;
+    margin: 1rem;
+}
+.yonder-title {
+    font-family: 'Zen Dots', cursive;
+    color: #3f3f3f;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: .5rem;
+    padding: .3rem;
+    border-radius: 10px;
+    background: #f19a3e80;
+    box-shadow: rgba(17, 17, 26, 0.15) 1px 1px 1px, rgba(17, 17, 26, 0.15) 1px 1px 8px;
+
 }
 .yonder-link {
     font-family: 'Zen Dots', cursive;
-    font-size: 1.1rem;
-    margin: 1rem;
+    font-size: 1.3rem;
+    margin: 3rem;
     text-decoration: none;
 }

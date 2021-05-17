@@ -1,9 +1,15 @@
 .detail-artist-name {
+   
     font-family: 'Zen Dots', cursive;
     color: #3f3f3f;
     font-size: 1.6rem;
-    letter-spacing: .5rem;
+    font-weight: 500;
+    margin: .5rem;
     padding: .3rem;
+    border-radius: 10px;
+    background: #f19a3e80;
+    box-shadow: rgba(17, 17, 26, 0.15) 1px 1px 1px, rgba(17, 17, 26, 0.15) 1px 1px 8px;
+
 }
 
 .related-title {
