@@ -1,3 +1,4 @@
+![Well](https://user-images.githubusercontent.com/70447532/118552996-543eb200-b725-11eb-8896-703bd881a0ea.png)
 # MUSIC[well]
 
 MUSIC[well] is an application for filling your musical [well] with artists based on their relationships to other artist. You can relate how you came to know your artists, add comments and reviews.
