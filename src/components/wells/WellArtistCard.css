@@ -1,5 +1,7 @@
 /* //     *****     Chad[well] Clark 2021     *****     // */
-
+* {
+    /* border: 1px solid black; */
+}
 .artist_card {
     display: flex;
     line-height: 1.3rem;
@@ -11,9 +13,12 @@
 }
 
 .artist_card_img {
+    display: flex;
+    margin: auto;
     width: 200px;
     height:auto;
     align-items: center;
+    justify-content: center;
 }
 .artist_card_sec {
     display:flex;
@@ -21,18 +26,23 @@
     /* justify-content: center; */
 }
 .artist_card_info {
-    max-width: 40%;
+    max-width: 80%;
 }
 .artist_card_name {
     font-family: 'Zen Dots', cursive;
+    
     padding: .5rem;
     font-size: 1rem;
 }
 .artist_card_blurb {
+     padding: .5rem;
     text-align: left;
    width:fit-content;
+   
 }
-
+.artist_card_link {
+    margin: .5rem;
+}
 .artist_card_comment {
     margin: .3rem;
     padding: .3rem;

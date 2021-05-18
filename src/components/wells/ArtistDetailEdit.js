@@ -151,9 +151,13 @@ export const ArtistDetailEdit = () => {
           {/* {console.log("related-groups", relatedGroups)} */}
           {/* {console.log("related-artists", relatedArtists)} */}
           <div className="detail-artist-name">{artist?.name}</div>
-          <img src={artist?.imageURL} alt={artist?.name} />
-          <div>{artist?.blurb}</div>
-          <div>{artist?.roles}</div>
+          <img
+            className="detail_img"
+            src={artist?.imageURL}
+            alt={artist?.name}
+          />
+          <div className="detail">{artist?.blurb}</div>
+          <div className="detail">{artist?.roles}</div>
           <a href={artist?.infoURL}>{artist?.infoURL}</a>
 
           <div>
@@ -164,7 +168,7 @@ export const ArtistDetailEdit = () => {
             <form>
               <label htmlFor="comment"></label>
               <textarea
-                placeholder="Comments, thoughts and reviews of artist... Maybe a nice recipe"
+                placeholder="Thoughts about this artist's relationships, a comment or review... Maybe a nice Taco recipe"
                 type="textarea"
                 id="comment"
                 onChange={handleFieldChange}
@@ -175,7 +179,7 @@ export const ArtistDetailEdit = () => {
                 rows="10"
                 cols="50"
               />
-              
+
               <button
                 onClick={saveComment}
                 className="artist-btn artist_detail_edit"

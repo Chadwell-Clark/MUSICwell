@@ -69,3 +69,8 @@ textarea {
     max-height: 600px;
     object-fit: contain;
 }
+
+.detail {
+    font-size: 1.1rem;
+    margin: 2rem 2rem;
+}

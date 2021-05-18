@@ -1,0 +1,725 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Chad",
+      "lastName": "Clark",
+      "email": "chad@musicwell.com",
+      "admin": false
+    },
+    {
+      "id": 2,
+      "firstName": "nut",
+      "lastName": "shell",
+      "email": "nut@nut.shell",
+      "admin": false
+    },
+    {
+      "id": 3,
+      "firstName": "snow",
+      "lastName": "flake",
+      "email": "snowy@dog.com",
+      "admin": false
+    },
+    {
+      "email": "concretin@musicwell.com",
+      "firstName": "Concretin",
+      "lastName": "Cretin",
+      "admin": false,
+      "id": 4
+    },
+    {
+      "email": "new@well.com",
+      "firstName": "new",
+      "lastName": "well",
+      "admin": false,
+      "id": 5
+    },
+    {
+      "email": "bryan@bryan.bryan",
+      "firstName": "bryan",
+      "lastName": "bryan",
+      "admin": false,
+      "id": 6
+    },
+    {
+      "email": "brenda@bryan.com",
+      "firstName": "Brenda",
+      "lastName": "Bryan",
+      "admin": false,
+      "id": 8
+    },
+    {
+      "email": "street@louis.st",
+      "firstName": "Street",
+      "lastName": "Louis",
+      "admin": false,
+      "id": 9
+    }
+  ],
+  "wells": [
+    {
+      "id": 1,
+      "userId": 2,
+      "artistId": 1,
+      "albumId": 1,
+      "comment": "'Music is the Best' Frank Zappa"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "artistId": 3,
+      "albumId": 1,
+      "comment": "'One Size Fits All' is a great starting point if you are new to the Zappa world."
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "artistId": 7,
+      "albumId": 1,
+      "comment": "Miles Davis redefined jazz several times through his career."
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "artistId": 8,
+      "albumId": 1,
+      "comment": "Zawinful played with Cannonball Adderly, and later with Miles Davis. Weather Report, the band he cofounded with Wayne Shorter is one of my favorite fusion bands. Many great albums especially Heavy Weather and the tunes Birdland and Teen Town...Jaco! "
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "artistId": 6,
+      "albumId": 1,
+      "comment": "Jaco was self proclaimed as the best bass player in the world. He is one of my favorite bass players. Many emulate him. I love his work with Pat Metheny and Weather Report but one of my favorite tunes is Three Views to a Secret off one of his solo albums."
+    },
+    {
+      "id": 7,
+      "userId": 3,
+      "artistId": 9,
+      "albumId": 1,
+      "comment": "Love some Beer for Dolphins. Who wouldn't"
+    },
+    {
+      "userId": 5,
+      "artistId": 6,
+      "albumId": 1,
+      "comment": "",
+      "id": 12
+    },
+    {
+      "id": 13,
+      "userId": 6,
+      "artistId": 7,
+      "albumId": 1,
+      "comment": "Miles should have been named Bryan. He never thought he could play as high as Dizzie Gillespie \nso he tried to play low."
+    },
+    {
+      "id": 14,
+      "userId": 6,
+      "artistId": 6,
+      "albumId": 1,
+      "comment": "Jaco wanted to recreate the sound of a fretless double bass on electric and so he took some pliers and ripped the frets out of his fender bass and in the process created the Jaco sound that so many people have tried to emulate."
+    },
+    {
+      "id": 15,
+      "userId": 6,
+      "artistId": 1,
+      "albumId": 1,
+      "comment": "Zappa is often thought of as a novelty act due to his persona and poking fun at anything and everything, but Zappa was a very serious composer.\n One of the finest in the twentieth century. Zappa was also very anti drug."
+    },
+    {
+      "id": 16,
+      "userId": 6,
+      "artistId": 3,
+      "albumId": 1,
+      "comment": "Don't really know his music but was loved by Zappa"
+    },
+    {
+      "id": 17,
+      "userId": 8,
+      "artistId": 1,
+      "albumId": 1,
+      "comment": "ZAppa rocks Alot"
+    },
+    {
+      "id": 18,
+      "userId": 8,
+      "artistId": 2,
+      "albumId": 1,
+      "comment": "George played for Frank in the 70s"
+    },
+    {
+      "id": 20,
+      "userId": 9,
+      "artistId": 1,
+      "albumId": 1,
+      "comment": "Music is the Best"
+    },
+    {
+      "id": 21,
+      "userId": 9,
+      "artistId": 9,
+      "albumId": 1,
+      "comment": ""
+    },
+    {
+      "id": 22,
+      "userId": 9,
+      "artistId": 6,
+      "albumId": 1,
+      "comment": ""
+    },
+    {
+      "id": 24,
+      "userId": 1,
+      "artistId": 1,
+      "albumId": 1,
+      "comment": "Freak me out Frank! The first time I heard Frank Zappa I did not get it musically. It took me hearing Joe Satriani's Surfing with the Alien and learning that Joe taught Kirk Hammet and Steve Vai to bring me back to Frank and realize what a 'Mother'Load of musical greatness was the result of Frank's Invention."
+    },
+    {
+      "id": 25,
+      "userId": 4,
+      "artistId": 15,
+      "albumId": 1,
+      "comment": "I remember Faith No More's 'Epic' and did not know who Mike Patton was but enjoyed his singing abilities. His work with Mr.Bungle is equally inspiring. I was surprised to find he worked with John Zorn. Small world"
+    },
+    {
+      "id": 26,
+      "userId": 4,
+      "artistId": 23,
+      "albumId": 1,
+      "comment": "Saw Steve Vai with David Lee Roth's Band and he was  quite the showman and musical force to be reckonned with. His first couple of solo albums are incredible. Wish I had seen him with Frank Zappa. My two favorite Vai tracks are 'Western Vacation' and Public Image Limited's 'Ease. Both solos are Steve at his best."
+    },
+    {
+      "id": 27,
+      "userId": 4,
+      "artistId": 19,
+      "albumId": 1,
+      "comment": "Trevor is a master of both electric and double bass. His work with John Zorn's Dreamers is probably my favorite. The Dreamers show from the 2010 Marciac Jazz Festival is a testament to Dunn's prowess, feel and powerful bass playing. I also enjoy his work with Nels Cline and the Tin Hat Trio. "
+    }
+  ],
+  "artists": [
+    {
+      "id": 1,
+      "name": "Frank Zappa",
+      "blurb": "Iconoclastic composer, performer and bandleader known for his vast recording output and live show theatrics.",
+      "infoURL": "https://www.zappa.com",
+      "roles": "Composer, Guitar, BandLeader, Vocals",
+      "imageURL": "https://theconcertdatabase.com/sites/theconcertdatabase.com/files/frank%20zappa.jpg"
+    },
+    {
+      "id": 2,
+      "name": "George Duke",
+      "blurb": "American keyboardist, singer, composer and producer",
+      "infoURL": "https://www.georgeduke.com",
+      "roles": "Keyboards, Vocals",
+      "imageURL": "https://theconcertdatabase.com/sites/theconcertdatabase.com/files/gd_1.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Johnny 'Guitar' Watson",
+      "blurb": "American guitarist and singer-songwriter of blues, funk, and soul. Hit songs include 'Superman Lover','A Real Mother for Ya' and 'Aint That a Bitch'.",
+      "infoURL": "https://en.wikipedia.org/wiki/Johnny_%22Guitar%22_Watson",
+      "roles": "Guitar, Vocals",
+      "imageURL": "https://theconcertdatabase.com/sites/theconcertdatabase.com/files/WATSON.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Chester Thompson",
+      "blurb": "American drummer who played with Frank Zappa, Weather Report, Genesis and Phil Collins.",
+      "infoURL": "https://en.wikipedia.org/wiki/Chester_Thompson",
+      "roles": "Drums, Percussion, Keyboards",
+      "imageURL": "https://theconcertdatabase.com/sites/theconcertdatabase.com/files/chester%20thompson.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Napolean Murphy Brock",
+      "blurb": "American singer, saxophonist and flutist. Largely known for his work with Frank Zappa.",
+      "infoURL": "https://en.wikipedia.org/wiki/Chester_Thompson",
+      "roles": "Vocals, Saxophone, Flute",
+      "imageURL": "https://img.discogs.com/pvCIrWnuiZryh9XGybiG6Phe0cA=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/A-283800-1140711334.jpeg.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Jaco Pastorius",
+      "blurb": "American jazz bassist demigod who played with Weather Report, Pat Metheny and Joni Mitchell.",
+      "infoURL": "http://www.jacopastorius.com",
+      "roles": "Fretless Bass, Bandleader",
+      "imageURL": "https://theconcertdatabase.com/sites/theconcertdatabase.com/files/Weather_Report2_%28Jaco_Pastorius%29.jpeg"
+    },
+    {
+      "id": 7,
+      "name": "Miles Davis",
+      "blurb": "American jazz icon trumpeter, composer and bandleader. His music styled jazz for decades.",
+      "infoURL": "https://www.milesdavis.com/",
+      "roles": "Trumpet, Bandleader",
+      "imageURL": "https://theconcertdatabase.com/sites/theconcertdatabase.com/files/miles%20davis.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Joe Zawinful",
+      "blurb": "Austrian jazz keyboardist and composer. Helped forge jazz fusion with synthesizers and electric piano.",
+      "infoURL": "https://www.zawinulonline.org/",
+      "roles": "Keyboardist, Composer",
+      "imageURL": "https://theconcertdatabase.com/sites/theconcertdatabase.com/files/joe%20zawinul.jpg"
+    },
+    {
+      "name": "Mike Keneally",
+      "blurb": "Prolific musician with monster chops and compelling songwriting. Zappa alum and Satriani sideman.",
+      "infoURL": "http://www.keneally.com/",
+      "roles": "Guitar, Keyboards, Vocals, Composer, BandLeader",
+      "imageURL": "http://www.keneally.com/archive/pix/wnhthtours/wnhth8_pic.jpg",
+      "id": 9
+    },
+    {
+      "name": "Adrian Belew",
+      "blurb": "American guitarist, drummer, and vocalist. Known for his unusual guitar style and impressive musicianship.",
+      "infoURL": "http://www.adrianbelew.net/",
+      "roles": "Guitar, Drums, Vocals, BandLeader, Producer",
+      "imageURL": "https://theconcertdatabase.com/sites/theconcertdatabase.com/files/adrian%20belew.jpg",
+      "id": 10
+    },
+    {
+      "name": "John Zorn",
+      "blurb": "American saxophonist who spans many genres and has a immense library of recorded works.",
+      "infoURL": "https://www.tzadik.com/",
+      "roles": "Saxophone, Composer,  Producer",
+      "imageURL": "https://img.discogs.com/LggrI_5IRkypFmAlWj1bdyx8egU=/600x914/smart/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/A-99731-1520585803-8684.jpeg.jpg",
+      "id": 11
+    },
+    {
+      "name": "Bill Frisell",
+      "blurb": "American guitar player whos career has spanned 40 years and  almost as many genres.",
+      "infoURL": "https://www.billfrisell.com/",
+      "roles": "Guitar, Composer and  Bandleader",
+      "imageURL": "https://images.squarespace-cdn.com/content/v1/5ae89e13266c07853ee42004/1543860389614-JTG8HKKIW6UKEA4QX7AM/ke17ZwdGBToddI8pDm48kDHPSfPanjkWqhH6pl6g5ph7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0mwONMR1ELp49Lyc52iWr5dNb1QJw9casjKdtTg1_-y4jz4ptJBmI9gQmbjSQnNGng/BillFrisell-SpaceAge-300dpi.jpg?format=500w",
+      "id": 12
+    },
+    {
+      "name": "Joey Baron",
+      "blurb": "American avant-garde drummer known for his work with John Zorn's Masada and other projects.",
+      "infoURL": "https://en.wikipedia.org/wiki/Joey_Baron",
+      "roles": "Drummer",
+      "imageURL": "https://i2.wp.com/jazzbluesnews.com/wp-content/uploads/2019/03/Joey-Baron.jpg?resize=525%2C330",
+      "id": 13
+    },
+    {
+      "name": "Fred Frith",
+      "blurb": "English multi-instrumentalist known for his free improvisation and experimental guitar work.",
+      "infoURL": "http://www.fredfrith.com/",
+      "roles": "Multi-instrumentalist, Composer, and Improvisor",
+      "imageURL": "https://i.ytimg.com/vi/PkcJYh42XhE/maxresdefault.jpg",
+      "id": 14
+    },
+    {
+      "name": "Mike Patton",
+      "blurb": "American multi-talented artist known for vocals with the band Faith No More and many others.",
+      "infoURL": "https://www.facebook.com/mikepatton",
+      "roles": "Singer, Songwriter, Producer, Composer, Voice Actor",
+      "imageURL": "https://www.metalsucks.net/wp-content/uploads/2017/08/mike_patton.jpg",
+      "id": 15
+    },
+    {
+      "name": "Wayne Horvitz",
+      "blurb": "American pianist and composer who has played in numerous bands and ensembles.He has composed music for his own bands, theater, dance, television and movies",
+      "infoURL": "http://www.waynehorvitz.com/",
+      "roles": "American Jazz Pianist, Organist, Composer and Band Leader",
+      "imageURL": "https://media.npr.org/assets/img/2015/12/04/01-wayne-horvitz-at-piano---daniel-sheehan_wide-2a479d6623865260a2cbb522407e749c3ff6726b-s800-c85.jpg",
+      "id": 16
+    },
+    {
+      "name": "Marc Ribot",
+      "blurb": "American guitarist and composer who weaves many styles into his guitar playing",
+      "infoURL": "https://www.marcribot.com/",
+      "roles": "Guitarist and Composer",
+      "imageURL": "https://allstarbio.com/wp-content/uploads/2020/02/Musician.jpg",
+      "id": 17
+    },
+    {
+      "name": "Kenny Wollesen",
+      "blurb": "American drummer and percussionist who is in high demand as a recording and touring musician.",
+      "infoURL": "https://en.wikipedia.org/wiki/Kenny_Wollesen",
+      "roles": "Drummer, Percussionist and Band Leader",
+      "imageURL": "https://pbs.twimg.com/media/Df-kERiWkAUdID-.jpg",
+      "id": 18
+    },
+    {
+      "name": "Trevor Dunn",
+      "blurb": "American bass guitarist who came to fame in Mr.Bungle but has worked in many styles with many of today's eclectic musicians.",
+      "infoURL": "https://www.trevordunn.net/",
+      "roles": "Bass Guitarist, Double Bassist and Composer",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/5/50/Trevor-dunn.jpg",
+      "id": 19
+    },
+    {
+      "name": "Jamie Saft",
+      "blurb": "American keyboardist and composer who has played with an eclectic group of musicians in styles ranging from doom metal, avant-gard to jazz and fusion.",
+      "infoURL": "https://jamiesaft.com/",
+      "roles": "Keyboardist, Multi-instrumentalist and Composer",
+      "imageURL": "https://s3.amazonaws.com/allaboutjazz/media/large/9/3/d/c35343b5a5df3e60237f4876df856.jpg",
+      "id": 20
+    },
+    {
+      "name": "Cyro Baptista",
+      "blurb": "Brazilian percussionist who has a long career playing percussion on many popular albums as well as being a part of John Zorn's Dreamers. He has also had success in the jam band circuit. Cyro makes many of the percussion instruments he plays.",
+      "infoURL": "https://www.cyrobaptista.com/",
+      "roles": "Percussionist, Band Leader and Composer",
+      "imageURL": "https://www.jazz.org/userfiles/cms_images/tessitura_production_seasons_cache/cyro_baptista_courtesy_web_crop_767_431_0_0_0_90___13997.jpg",
+      "id": 21
+    },
+    {
+      "name": "Ikue Mori",
+      "blurb": "Japanese drummer, electronic musician and composer who came to New York in 1977 and never left, remaining involved in the experimental music scene.",
+      "infoURL": "http://www.ikuemori.com/",
+      "roles": "Percussionist, Band Leader and Composer",
+      "imageURL": "https://www.newmusicusa.org/wp-content/uploads/2019/08/2271-47A30F76-848D-424A-9BDB-42321497BEC5-1.jpg",
+      "id": 22
+    },
+    {
+      "name": "Steve Vai",
+      "blurb": "American guitarist best known for his instrumental virtuosity and whammy bar trickery. Vai was 'stunt guitarist' for Frank Zappa for several albums and tours.",
+      "infoURL": "https://www.vai.com/",
+      "roles": "Guitarist, Composer and Producer",
+      "imageURL": "https://cdn.mos.cms.futurecdn.net/YuEUjB7G2Mpd9VChJ47yeN.jpg",
+      "id": 23
+    },
+    {
+      "name": "Pat Metheny",
+      "blurb": "American guitarist focused on various styles of jazz. He has won accolades from fans around the world and 20 Grammy's in 10 categories. ",
+      "infoURL": "https://www.patmetheny.com/",
+      "roles": "Guitarist, Composer and Producer",
+      "imageURL": "https://ca-times.brightspotcdn.com/dims4/default/604d063/2147483647/strip/true/crop/512x288+0+27/resize/1200x675!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F76%2Fa9%2Fd336e728dc71e9ce269d1f0b9ce7%2Fsdut-file-in-this-aug.-4-2012-fil-20160904-001",
+      "id": 24
+    },
+    {
+      "name": "Lyle Mays",
+      "blurb": "American keyboardist who collaborated, co-wrote and arranged with long time musical bandmate Pat Metheny for 30 years. ",
+      "infoURL": "https://www.lylemays.com/",
+      "roles": "Pianist, Composer and Arranger",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz65Juy_pzFYTeppp3lXiqNb3M8ZBJzTGadA&usqp=CAU",
+      "id": 25
+    },
+    {
+      "name": "John Coltrane",
+      "blurb": "American saxophonist and composer who helped pioneer free jazz and extended use of modes.  ",
+      "infoURL": "https://www.johncoltrane.com/",
+      "roles": "Tenor, Soprano and Alto Saxophonist, Flutist, Bass Clarinetist, Composer and Band Leader",
+      "imageURL": "https://www.thewire.co.uk/img/scale/940/736/2017/07/06/COLTRANE_John.jpg",
+      "id": 26
+    },
+    {
+      "name": "Cannonball Adderley",
+      "blurb": "American alto Saxophonist who played on many seminal jazz albums of the 50s and 60s.",
+      "infoURL": "https://www.cannonball-adderley.com/",
+      "roles": "Alto Saxophonist, Composer and Band Leader",
+      "imageURL": "https://www.udiscovermusic.com/wp-content/uploads/2020/09/Cannonball-Adderley-GettyImages-1049262808.jpg",
+      "id": 27
+    },
+    {
+      "name": "Bill Evans",
+      "blurb": "American jazz pianist who influenced jazz heavily with his trademark style.",
+      "infoURL": "https://billevansofficial.com/",
+      "roles": "Pianist, Composer, Arranger and Band Leader",
+      "imageURL": "https://i.guim.co.uk/img/static/sys-images/Arts/Arts_/Pictures/2014/11/4/1415116528173/Bill-Evans-014.jpg?width=300&quality=45&auto=format&fit=max&dpr=2&s=d3bac6d3c7502b65e877c52b976b8a28",
+      "id": 28
+    },
+    {
+      "name": "Paul Chambers",
+      "blurb": "American jazz double basis who was instrumental in advancing jazz bass, known for his improvisation. ",
+      "infoURL": "https://en.wikipedia.org/wiki/Paul_Chambers",
+      "roles": "Double Basist, Band Leader and Composer",
+      "imageURL": "https://newyorkjazzworkshop.com/wp-content/uploads/2018/04/chamberswolff.jpg",
+      "id": 29
+    },
+    {
+      "name": "Jimmy Cobb",
+      "blurb": "American drummer who was part of the Miles Davis Sextet of late 50s jazz fame. ",
+      "infoURL": "https://en.wikipedia.org/wiki/Jimmy_Cobb",
+      "roles": "Drummer and University Educator",
+      "imageURL": "https://static01.nyt.com/images/2020/05/27/obituaries/27Cobb1/26Cobb1-mediumSquareAt3X.jpg",
+      "id": 30
+    }
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "name": "Frank Zappa Band"
+    },
+    {
+      "id": 2,
+      "name": "Weather Report"
+    },
+    {
+      "id": 3,
+      "name": "Miles Davis Band"
+    },
+    {
+      "id": 4,
+      "name": "Naked City"
+    },
+    {
+      "id": 5,
+      "name": "Electric Masada"
+    },
+    {
+      "id": 6,
+      "name": "Pat Metheny Group"
+    }
+  ],
+  "artists_groups": [
+    {
+      "id": 1,
+      "artistId": 1,
+      "groupId": 1
+    },
+    {
+      "id": 2,
+      "artistId": 2,
+      "groupId": 1
+    },
+    {
+      "id": 3,
+      "artistId": 3,
+      "groupId": 1
+    },
+    {
+      "id": 4,
+      "artistId": 4,
+      "groupId": 1
+    },
+    {
+      "id": 5,
+      "artistId": 5,
+      "groupId": 1
+    },
+    {
+      "id": 6,
+      "artistId": 4,
+      "groupId": 2
+    },
+    {
+      "id": 7,
+      "artistId": 6,
+      "groupId": 2
+    },
+    {
+      "id": 8,
+      "artistId": 8,
+      "groupId": 2
+    },
+    {
+      "id": 9,
+      "artistId": 8,
+      "groupId": 3
+    },
+    {
+      "id": 10,
+      "artistId": 7,
+      "groupId": 3
+    },
+    {
+      "id": 11,
+      "artistId": 9,
+      "groupId": 1
+    },
+    {
+      "id": 12,
+      "artistId": 10,
+      "groupId": 1
+    },
+    {
+      "id": 13,
+      "artistId": 11,
+      "groupId": 4
+    },
+    {
+      "id": 14,
+      "artistId": 12,
+      "groupId": 4
+    },
+    {
+      "id": 15,
+      "artistId": 13,
+      "groupId": 4
+    },
+    {
+      "id": 16,
+      "artistId": 14,
+      "groupId": 4
+    },
+    {
+      "id": 17,
+      "artistId": 15,
+      "groupId": 4
+    },
+    {
+      "id": 18,
+      "artistId": 16,
+      "groupId": 4
+    },
+    {
+      "id": 19,
+      "artistId": 11,
+      "groupId": 5
+    },
+    {
+      "id": 20,
+      "artistId": 13,
+      "groupId": 5
+    },
+    {
+      "id": 22,
+      "artistId": 17,
+      "groupId": 5
+    },
+    {
+      "id": 23,
+      "artistId": 18,
+      "groupId": 5
+    },
+    {
+      "id": 24,
+      "artistId": 19,
+      "groupId": 5
+    },
+    {
+      "id": 25,
+      "artistId": 20,
+      "groupId": 5
+    },
+    {
+      "id": 26,
+      "artistId": 21,
+      "groupId": 5
+    },
+    {
+      "id": 27,
+      "artistId": 22,
+      "groupId": 5
+    },
+    {
+      "id": 28,
+      "artistId": 23,
+      "groupId": 1
+    },
+    {
+      "id": 29,
+      "artistId": 24,
+      "groupId": 6
+    },
+    {
+      "id": 30,
+      "artistId": 6,
+      "groupId": 6
+    },
+    {
+      "id": 31,
+      "artistId": 25,
+      "groupId": 6
+    },
+    {
+      "id": 32,
+      "artistId": 26,
+      "groupId": 3
+    },
+    {
+      "id": 33,
+      "artistId": 27,
+      "groupId": 3
+    },
+    {
+      "id": 34,
+      "artistId": 28,
+      "groupId": 3
+    },
+    {
+      "id": 35,
+      "artistId": 29,
+      "groupId": 3
+    },
+    {
+      "id": 36,
+      "artistId": 30,
+      "groupId": 3
+    }
+  ],
+  "albums": [
+    {
+      "id": 1,
+      "name": "One Size Fits All",
+      "year": "1975",
+      "label": "Barking Pumpkin"
+    },
+    {
+      "id": 2,
+      "name": "Black Market",
+      "year": "1976",
+      "label": "Columbia Records"
+    },
+    {
+      "id": 3,
+      "name": "Kind of Blue",
+      "year": "1959",
+      "label": "Columbia Records"
+    },
+    {
+      "name": "Shiek Yerbouti",
+      "year": "1979",
+      "label": "Barking Pumpkin",
+      "id": 4
+    }
+  ],
+  "artists_albums": [
+    {
+      "id": 1,
+      "artistId": 1,
+      "albumId": 1
+    },
+    {
+      "id": 2,
+      "artistId": 2,
+      "albumId": 1
+    },
+    {
+      "id": 3,
+      "artistId": 3,
+      "albumId": 1
+    },
+    {
+      "id": 4,
+      "artistId": 4,
+      "albumId": 1
+    },
+    {
+      "id": 5,
+      "artistId": 5,
+      "albumId": 1
+    },
+    {
+      "id": 6,
+      "artistId": 4,
+      "albumId": 1
+    },
+    {
+      "id": 7,
+      "artistId": 6,
+      "albumId": 2
+    },
+    {
+      "id": 8,
+      "artistId": 8,
+      "albumId": 2
+    },
+    {
+      "id": 9,
+      "artistId": 7,
+      "albumId": 3
+    },
+    {
+      "id": 10,
+      "artistId": 10,
+      "albumId": 4
+    }
+  ]
+}

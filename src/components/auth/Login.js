@@ -40,7 +40,6 @@ export const Login = () => {
 
   return (
     <main className="container--login">
-    {/* <main className="container--login" style={{ textAlign: "center" }}> */}
       <div className="">
         <dialog className="dialog dialog--auth" open={existDialog}>
             <div className="dialog-inner">
@@ -61,9 +60,6 @@ export const Login = () => {
                 <div className="login-div">
                   <h2>Login with email</h2>
                 </div>
-                {/* <fieldset> */}
-                {/* <div className="login-div"> */}
-                {/* </div> */}
                 <div className="login-div">
                   <label htmlFor="inputEmail"></label>
                   <input
@@ -77,14 +73,11 @@ export const Login = () => {
                     onChange={handleInputChange}
                   />
                 </div>
-                {/* </fieldset> */}
-                {/* <fieldset> */}
                 <div className="login-div">
                   <button className="login-btn" type="submit">
                     Login
                   </button>
                 </div>
-                {/* </fieldset> */}
               </form>
             </section>
             <section className="link--register">

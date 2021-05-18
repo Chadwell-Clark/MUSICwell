@@ -52,6 +52,18 @@ width: 20%;
     background: #729b79bd;
     border-radius: 6px;
 }
+.artist_card_img {
+    
+    max-width: 550px;
+    max-height: 600px;
+    object-fit: contain;
+}
+.artist_card_name {
+    font-family: 'Zen Dots', cursive;
+    color: #3f3f3f;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
 
 /* .search_card_name {
     margin: 1rem;
