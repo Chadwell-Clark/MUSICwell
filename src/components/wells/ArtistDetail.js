@@ -197,9 +197,9 @@ export const ArtistDetail = () => {
         {/* {console.log("related-artists", relatedArtists)} */}
         <div className="detail-artist-name">{artist?.name}</div>
         <img className="detail_img" src={artist?.imageURL} alt={artist?.name} />
-        <div>{artist?.blurb}</div>
-        <div>{artist?.roles}</div>
-        <a href={artist?.infoURL}>{artist?.infoURL}</a>
+        <div className="detail">{artist?.blurb}</div>
+        <div className="detail">{artist?.roles}</div>
+        <a className="detail" href={artist?.infoURL}>{artist?.infoURL}</a>
 
         <div>{btns}</div>
       </section>

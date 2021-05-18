@@ -101,20 +101,6 @@
       "comment": "Love some Beer for Dolphins. Who wouldn't"
     },
     {
-      "userId": 4,
-      "artistId": 9,
-      "albumId": 1,
-      "comment": "",
-      "id": 10
-    },
-    {
-      "userId": 4,
-      "artistId": 6,
-      "albumId": 1,
-      "comment": "",
-      "id": 11
-    },
-    {
       "userId": 5,
       "artistId": 6,
       "albumId": 1,
@@ -192,11 +178,25 @@
       "comment": "Freak me out Frank! The first time I heard Frank Zappa I did not get it musically. It took me hearing Joe Satriani's Surfing with the Alien and learning that Joe taught Kirk Hammet and Steve Vai to bring me back to Frank and realize what a 'Mother'Load of musical greatness was the result of Frank's Invention."
     },
     {
-      "userId": 1,
-      "artistId": 7,
+      "id": 25,
+      "userId": 4,
+      "artistId": 15,
       "albumId": 1,
-      "comment": "",
-      "id": 25
+      "comment": "I remember Faith No More's 'Epic' and did not know who Mike Patton was but enjoyed his singing abilities. His work with Mr.Bungle is equally inspiring. I was surprised to find he worked with John Zorn. Small world"
+    },
+    {
+      "id": 26,
+      "userId": 4,
+      "artistId": 23,
+      "albumId": 1,
+      "comment": "Saw Steve Vai with David Lee Roth's Band and he was  quite the showman and musical force to be reckonned with. His first couple of solo albums are incredible. Wish I had seen him with Frank Zappa. My two favorite Vai tracks are 'Western Vacation' and Public Image Limited's 'Ease. Both solos are Steve at his best."
+    },
+    {
+      "id": 27,
+      "userId": 4,
+      "artistId": 19,
+      "albumId": 1,
+      "comment": "Trevor is a master of both electric and double bass. His work with John Zorn's Dreamers is probably my favorite. The Dreamers show from the 2010 Marciac Jazz Festival is a testament to Dunn's prowess, feel and powerful bass playing. I also enjoy his work with Nels Cline and the Tin Hat Trio. "
     }
   ],
   "artists": [
@@ -362,7 +362,7 @@
     },
     {
       "name": "Cyro Baptista",
-      "blurb": "Brazilian percussionist who makes many of the percussion instruments he plays",
+      "blurb": "Brazilian percussionist who has a long career playing percussion on many popular albums as well as being a part of John Zorn's Dreamers. He has also had success in the jam band circuit. Cyro makes many of the percussion instruments he plays.",
       "infoURL": "https://www.cyrobaptista.com/",
       "roles": "Percussionist, Band Leader and Composer",
       "imageURL": "https://www.jazz.org/userfiles/cms_images/tessitura_production_seasons_cache/cyro_baptista_courtesy_web_crop_767_431_0_0_0_90___13997.jpg",

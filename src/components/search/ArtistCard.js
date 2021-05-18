@@ -4,6 +4,7 @@ import React from "react";
 // import "./WellArtistCard.css";
 import { currUser } from "../helpers/Helpers.js";
 import { Link } from "react-router-dom";
+import "./Search.css";
 
 export const ArtistCard = ({ artist, userWells }) => {
   const user = currUser();
@@ -35,7 +36,7 @@ export const ArtistCard = ({ artist, userWells }) => {
         <Link to={`artistdetail/${artist.id}`}>
           <button className="artist_detail">Details</button>
         </Link>
-        <button className="artist_add">add</button>{" "}
+        {/* <button className="artist_add">add</button>{" "} */}
       </>
     );
   }
@@ -53,8 +54,8 @@ export const ArtistCard = ({ artist, userWells }) => {
         <div className="artist_card_body">
           <div className="artist_card_sec">
             <div className="artist_card_info">
-              <div>{artist?.name}</div>
-              <div>{artist?.blurb}</div>
+              <div className="artist_card_name">{artist?.name}</div>
+              <div className="artist_card_blurb">{artist?.blurb}</div>
               {/* <a href={artist?.infoURL}>More info about {artist.name}</a> */}
             </div>
             <div className="artist_card_top_btn">{btns}</div>

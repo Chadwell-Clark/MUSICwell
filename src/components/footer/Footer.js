@@ -11,7 +11,6 @@ export const Footer = () => {
 
   const handleBob = () => {
     getDobbs().then((jr) => {
-      // console.log(jr);
       setBobs(jr);
       return jr;
     });

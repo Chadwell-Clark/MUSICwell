@@ -76,7 +76,6 @@ export const Register = () => {
           <div className="login-div">
             <h2>Register your [well]</h2>
           </div>
-          {/* <fieldset> */}
           <div className="login-font-weight">
             <label htmlFor="firstName"> First Name </label>
           </div>
@@ -93,8 +92,6 @@ export const Register = () => {
               onChange={handleInputChange}
             />
           </div>
-          {/* </fieldset> */}
-          {/* <fieldset> */}
           <div className="login-font-weight">
             <label htmlFor="lastName"> Last Name </label>
           </div>
@@ -110,8 +107,6 @@ export const Register = () => {
               onChange={handleInputChange}
             />
           </div>
-          {/* </fieldset> */}
-          {/* <fieldset> */}
           <div className="login-font-weight">
             <label htmlFor="inputEmail"> Email address </label>
           </div>
@@ -127,15 +122,12 @@ export const Register = () => {
               onChange={handleInputChange}
             />
           </div>
-          {/* </fieldset> */}
-          {/* <fieldset> */}
           <div className="login-div">
             <button className="login-btn" type="submit">
               {" "}
               Login{" "}
             </button>
           </div>
-          {/* </fieldset> */}
         </div>
       </form>
     </main>
