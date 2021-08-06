@@ -1,3 +1,4 @@
+![Musicwell1](https://user-images.githubusercontent.com/70447532/128563819-a660d4ec-4e14-40ad-9ce9-e7c345e358d6.png)
 
 # MUSIC[well]
 
@@ -34,7 +35,17 @@ The registration is for purposes of proof of concept and has no security employe
 
 The Trifecta of web Development-- HTML, CSS and Javascript using React and styled-css-grid.
 
+## Screenshots 
+
+![Musicwell2](https://user-images.githubusercontent.com/70447532/128564805-29c77322-7aad-44ab-ab71-fd2f572b32e4.png)
+
+![Musicwell1](https://user-images.githubusercontent.com/70447532/128563819-a660d4ec-4e14-40ad-9ce9-e7c345e358d6.png)
+
+## ERD
 ![Well](https://user-images.githubusercontent.com/70447532/118552996-543eb200-b725-11eb-8896-703bd881a0ea.png)
+
+## Wireframe
+
 ![Component 1](https://user-images.githubusercontent.com/70447532/118554079-b1873300-b726-11eb-9230-270a5396dc36.png)
 
 
