@@ -8,10 +8,10 @@ You can search for other artist using the search function or look through relate
 
 ## Installation
 
-Clone repo
-From root directory ```npm install``` 
+Clone repo<br />
+From root directory in terminal run```npm install``` 
 
-From api directory ```json-server -p 8088 -w database.json```
+
 
 
 
@@ -20,9 +20,9 @@ From api directory ```json-server -p 8088 -w database.json```
 
 ## Usage
 
-From api directory ```json-server -p 8088 -w database.json```
+From api directory in terminal run ```json-server -p 8088 -w database.json```
 
-From root directory ```npm start``` will open app in browser window
+From root directory in terminal run```npm start``` app will open in browser window
 
 Register a user and begin filling your well with artists and add your comments, thoughts, reviews and the ways you came to find your artists.
 
