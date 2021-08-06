@@ -1,4 +1,4 @@
-![Musicwell1](https://user-images.githubusercontent.com/70447532/128563819-a660d4ec-4e14-40ad-9ce9-e7c345e358d6.png)
+
 
 # MUSIC[well]
 
