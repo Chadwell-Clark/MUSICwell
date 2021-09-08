@@ -5,15 +5,15 @@ import { Route } from "react-router-dom";
 import { UserWellList } from "./wells/UserWellList.js";
 import { ArtistDetail } from "./wells/ArtistDetail.js";
 import { ArtistDetailEdit } from "./wells/ArtistDetailEdit.js";
-import { YonderWellsList } from "./yonderwells/YonderWellsList.js";
-import { YonderWell } from "./yonderwells/YonderWell.js";
+import { YonderWellsList } from "./yonderWells/YonderWellsList.js";
+import { YonderWell } from "./yonderWells/YonderWell.js";
 import { SearchList } from "./search/SearchList.js";
 
 export const ApplicationViews = ({ searchInputText }) => {
   // window.scroll(0, 0);
   return (
     <>
-    {window.scrollTo(0, 0)}
+      {window.scrollTo(0, 0)}
       <div className="container_appViews">
         <Route exact path="/artistdetail/:artistId(\d+)">
           <ArtistDetail />
