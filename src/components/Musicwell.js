@@ -9,7 +9,7 @@ import { Register } from "./auth/Register.js";
 import { NavBar } from "./navbar/NavBar.js";
 import "./Musicwell.css";
 import { SearchSide } from "./search/SearchSide.js";
-import { YonderWellsSide } from "./yonderwells/YonderWellsSide.js";
+import { YonderWellsSide } from "./yonderWells/YonderWellsSide.js";
 import { Footer } from "./footer/Footer.js";
 
 export const Musicwell = () => {
@@ -60,7 +60,6 @@ export const Musicwell = () => {
                     >
                       <YonderWellsSide />
                     </Cell>
-                    
                   </Grid>
                   <Footer />
                 </div>
